@@ -1,0 +1,14 @@
+<div id = "content">
+<h1>Math</h1>
+<p>
+  Random simple bits of Math if I ever come to it.
+
+  <ul>
+    <li><a href = "posts/math/double-angle-rot.html">Deriving Double Angles through Matrix Rotations</a></li>
+    <li><a href = "posts/math/euler.html">A look at Euler's Identity and Euler's Formula</a></li>
+  </ul>
+</p>
+
+<img src = "images/pikachu-construction.gif">
+<p class = "last-edit"><b>Last Major Edit:</b> 2023-10-09</p>
+</div>
