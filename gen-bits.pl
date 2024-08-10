@@ -28,7 +28,7 @@ open(FH, ">>", "index.html" ) || die "Can't open index.html: $!";
 print FH "<div id = 'content'>";
 my $num = 0;
 opendir(DIRHANDLE, ${BITS_DIR}) || die "Cannot opendir bits: $!";
-foreach my $fname (sort readdir(DIRHANDLE)) {
+foreach my $fname (reverse sort readdir(DIRHANDLE)) {
   if ($fname !~ /^20\d\d-\d\d-\d\d/) {
     next;
   }
