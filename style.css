@@ -118,8 +118,36 @@ marquee {
   margin-top: 0px;
 }
 
+.bits img {
+  display: block;
+  margin: auto;
+}
+
 .bits-hr {
   border-top: dotted 1px;
+}
+
+pre code {
+  background-color: #1b1b1b;
+  display: block;
+  border-radius: 0.25rem;
+  padding: .5rem;
+  line-height: 1.25em;
+}
+
+code {
+  background-color: #1b1b1b;
+  border-radius: 0.25rem;
+  padding: .25rem;
+  line-height: 1.25em;
+}
+
+
+blockquote {
+  background-color: #313131;
+  border-radius: 0.25rem;
+  padding: 1rem;
+  line-height: 1.5em;
 }
 
 header {
