@@ -7,6 +7,7 @@ body {
   color: #c8cbcf;
 /*  font-family: Verdana;*/
   font-size: 1.25em;
+  margin: 0px;
 }
 
 nav {
@@ -22,6 +23,10 @@ nav a:visited {
     padding: 8px;
     letter-spacing: 5px;
     text-decoration: none;
+}
+
+img {
+  max-width: 100%;
 }
 
 .last-edit {
@@ -48,9 +53,7 @@ nav a:hover {
 
 nav {
     font-weight: bold;
-    margin-bottom: 4px;
-    border: 1px solid;
-    border-radius: 10px;
+    margin-bottom: 6px;
 }
 
 a, a:visited {
@@ -133,6 +136,7 @@ pre code {
   border-radius: 0.25rem;
   padding: .5rem;
   line-height: 1.25em;
+  overflow: scroll;
 }
 
 code {
@@ -152,26 +156,34 @@ blockquote {
 
 header {
   margin-bottom: 10px;
+  background-color: #1a1a1a;
+  border-bottom: 1px solid;
+  border-color: #1a56bd;
 }
 
 footer {
-    letter-spacing: 2px;
-    margin: 0px;
-    margin-top: 10px;
-    margin-bottom: 25px;
-    width: 99%;
-    text-align: center;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    font-size: calc(10px + 1vmin);
-    justify-content: center;
+  letter-spacing: 2px;
+  margin: 0px;
+  margin-top: 10px;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-size: calc(10px + 1vmin);
+  justify-content: center;
+  background-color: #1a1a1a;
+  border-top: 1px solid;
+  border-color: #1a56bd;
+  padding-bottom: 10px;
 }
 
 @media only screen and (min-width: 650px) { 
-  body{
+  header, footer, #wrapper {
     padding-left: 10%;
     padding-right: 10%;
+  }
+  #buttons {
+    width: 50%;
   }
 }
 
@@ -192,6 +204,7 @@ footer {
     flex-direction: column;
   }
   #content {
-    padding: 1em;
+    padding: .5em;
+    border: 0px;
   }
 }
