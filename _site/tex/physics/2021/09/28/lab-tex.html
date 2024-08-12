@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>Physics Lab Tex Template - RANDOM BITS</title>
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.cdnfonts.com/css/common-pixel" rel="stylesheet">
+    <link href="/assets/css/style.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="icon" type="image/png" href="/assets/site/random-bits-favicon.png">
+    <meta name="og:title" content="Random Bits">
+    <meta name="og:image" content="">
+    <meta name="og:description"
+        content="Random bits of programming, math, and personal thoughts">
+    <meta name="keywords" content="zakuarbor, programming, math, random bits, pikachu">
+    <meta name="description" content="Random bits of programming, math, and personal thoughts">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script charset="utf-8" src="/assets/js/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+  </script>
+  <header>
+    <center>
+      <h1 id = "title"><a href = "index.html">RANDOM BITS</a></h1>
+    A random site by a random clueless human
+    </center>
+    <marquee scrollamount="4">
+      Random bits of programming, math, and thoughts
+      By a clueless human
+      &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+      Random bits of programming, math, and thoughts
+      By a clueless human
+    </marquee>
+
+    <a href="javascript:void(0);" class="hamburger-nav" onclick="toggleMenu()"><i class="fa fa-bars"></i></a>
+    <nav id="header-nav">
+    <center>
+      <a href="/index.html">Home</a>
+      <a href="/micro.html"><span style = "letter-spacing: 1px;">µ</span>Blog</a>
+      <a href="/math.html">Math</a>
+      <a href="/about.html">About</a>
+    </center>
+    </nav>
+    </header>
+
+
+  </head>
+  <body>
+
+    <div id = "wrapper">
+  
+    <div id = "content">
+      <div class = "bits">
+  <h1 class = "title">Physics Lab Tex Template</h1>
+
+  <div>
+    <p class = "date">September 28, 2021</p>
+    
+    <div class="tags">
+      
+      
+        <a href="/categories/#tex">tex</a>
+        &nbsp;
+      
+        <a href="/categories/#physics">physics</a>
+        
+      
+    </div>
+  </div>
+    <p>I have just finished my first Physics lab in many years and it was quite more 
+time-consuming than I initially thought. This post will go over briefly a 
+few tex commands I found useful when writing my lab along with a link to my 
+Physics template that’ll be subject to change as I write more and more labs.</p>
+
+<p><img src="/assets/math-physics/tex-anime1.png" alt="From Rike ga Koi ni Ochita no de Shoumeishitemita" /></p>
+
+<h2 id="title-page">Title Page</h2>
+
+<p>Perhaps your school requires you to have a title page for every lab report you 
+write. Typically it contains the title of the lab, the course code, the date 
+you wrote the lab, the name of your TA and your name.</p>
+
+<p>If you are not provided with a title page written in Tex, you’ll need to script 
+your own title page. That’s where <code class="language-plaintext highlighter-rouge">titlepage</code> environment comes in handy.</p>
+
+<p><code class="language-plaintext highlighter-rouge">titlepage</code> is used to indicate everything enclosed is part of your title page 
+and therefore will reserve the page to contain only the contents enclosed in 
+the titlepage environment.</p>
+
+<div class="language-tex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">\begin{titlepage}</span>
+# Contents of your titlepage
+<span class="nt">\end{titlepage}</span>
+</code></pre></div></div>
+
+<p>Some very useful commands to use on your title page are the following:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">\vspace*{1cm}</code> - adds a vertical space (think of it as moving the cursor down) by some specified amount</li>
+  <li><code class="language-plaintext highlighter-rouge">\centerline{}</code> - places the text to the center</li>
+  <li><code class="language-plaintext highlighter-rouge">\hfill &lt;contents&gt;</code> - fills horizontally the remaining space before the content with spaces (i.e. in this specific example, the text is aligned to the right)</li>
+  <li><code class="language-plaintext highlighter-rouge">\begin{flushright} &lt;contents&gt; \end{right}</code> - another alternative to the previous point but this can give you control on where to place the text</li>
+</ul>
+
+<h2 id="equations">Equations</h2>
+
+<p>The beauty and power of tex is its ability to typeset mathematical symbols with ease. 
+I won’t be going over the various mathematical symbols and ways to write common math formulas since that’ll make this post too long. 
+What I’ll be focusing on are commands I found very useful or find myself frequently use during my reports. 
+In any paper or textbook you read, you’ll notice that the equations are always numbered so that the author can reference the equation. 
+In a Physics lab, you’ll want to reference your equations quite often to explain concepts or allow readers to quickly go back to the theory section where 
+the equations are derived or explained in more detail during your calculation  section. This is done with the use of the <code class="language-plaintext highlighter-rouge">equation</code> environment.</p>
+
+<p><strong>Example:</strong></p>
+<div class="language-tex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">\begin{equation}</span>
+  <span class="k">\rho</span> = <span class="k">\frac</span><span class="p">{</span>m<span class="p">}{</span>V<span class="p">}</span>
+<span class="nt">\end{equation}</span>
+</code></pre></div></div>
+<p><strong>Output:</strong>
+\begin{equation}\label{eq:density}
+\rho = \frac{m}{V}
+\end{equation}</p>
+
+<p>Notice how an equation number is assigned even though we never explicitly assigned a number to it. 
+Tex tracks and numbers equations based on when they appear. This feature is very powerful and gives 
+you the flexibility to add equations anywhere at any time without the need to go to every single 
+equation and reassign a number to it. But how do you know what number to reference whenever you 
+are trying to reference a particular equation? That’s where <strong>labels</strong> come in.</p>
+
+<p>Labels are names you assign to any particular area whether that be a section, equation, figure, or anywhere you want 
+to create a link to. Whenever you want to reference an equation, just use <code class="language-plaintext highlighter-rouge">\ref{label}</code> or <code class="language-plaintext highlighter-rouge">\hyperref[label]{reference text}</code>. For instance, 
+in the previous example, I actually didn’t show you the entire code snippet. But the actual code I wrote was the following:</p>
+<div class="language-tex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">\begin{equation}</span><span class="k">\label</span><span class="p">{</span>eq:density<span class="p">}</span>
+<span class="k">\rho</span> = <span class="k">\frac</span><span class="p">{</span>m<span class="p">}{</span>V<span class="p">}</span>
+<span class="nt">\end{equation}</span>
+</code></pre></div></div>
+
+<p>Labels are typically assigned a prefix to indicate what we are referencing such as if it’s a figure, section, table, or an equation. For 
+equations, we use the prefix <code class="language-plaintext highlighter-rouge">eq</code> (i.e. <code class="language-plaintext highlighter-rouge">eq:label-name</code>). So to reference the density equation, we can use <code class="language-plaintext highlighter-rouge">\ref</code> command like so:</p>
+<div class="language-tex highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Let's substitute the theoretical volume to equation <span class="k">\ref</span><span class="p">{</span>eq:density<span class="p">}</span>.
+</code></pre></div></div>
+
+<p><strong>Example:</strong></p>
+<div class="language-tex highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Let's substitute the theoretical volume to equation <span class="k">\ref</span><span class="p">{</span>eq:density<span class="p">}</span>.
+</code></pre></div></div>
+<p><strong>Output:</strong>
+Let’s substitute the theoretical volume to equation \ref{eq:density}.</p>
+
+<hr />
+
+<p>Another useful command is the text command (<strong><code class="language-plaintext highlighter-rouge">\text{...}</code></strong>) when you are in 
+math mode. You’ll probably notice when working with Tex that letters in 
+Math mode are italicized and the fact you cannot write sentences.</p>
+
+<center>
+$\frac{kg}{cm^3} \text{v.s.} \frac{\text{kg}}{\text{cm3}^3}$
+
+&lt;/&gt;
+
+$Hello World \text{ v.s.} \text{Hello World}$
+</center>
+
+<p>Although italicized units are probably not an issue, there are times when you want to 
+add commentary in a step. That’s where the tag command comes in (i.e. <code class="language-plaintext highlighter-rouge">\tag{A Commentary}</code>).</p>
+
+<p><strong>Example:</strong></p>
+<div class="language-tex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">\begin{align*}</span>
+    v(t) <span class="p">&amp;</span>= <span class="k">\frac</span><span class="p">{</span>d<span class="p">}{</span>dt<span class="p">}</span> x(t) <span class="k">\\</span>
+    <span class="p">&amp;</span>= <span class="k">\frac</span><span class="p">{</span>d<span class="p">}{</span>dt<span class="p">}</span> mt + b <span class="p">&amp;</span> <span class="k">\tag</span><span class="p">{</span>from equation 3<span class="p">}</span> <span class="k">\\</span>
+   <span class="p">&amp;</span>= m
+<span class="nt">\end{align*}</span>
+</code></pre></div></div>
+<p><strong>Output:</strong>
+\(\begin{align*}
+    v(t) &amp;= \frac{d}{dt} x(t) \\
+    &amp;= \frac{d}{dt} mt + b \tag{from equation 3} \\
+   &amp;= m
+\end{align*}\)</p>
+
+<p>In the example above, notice how the equal signs line up. This can be achieved 
+through the <strong>align*</strong> environment and adding <code class="language-plaintext highlighter-rouge">&amp;</code> before the equal sign.</p>
+
+<p><strong>Example:</strong></p>
+<div class="language-tex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">\begin{align*}</span>
+    v(t) <span class="p">&amp;</span>= <span class="k">\frac</span><span class="p">{</span>d<span class="p">}{</span>dt<span class="p">}</span> x(t) <span class="k">\\</span>
+    <span class="p">&amp;</span>= <span class="k">\frac</span><span class="p">{</span>d<span class="p">}{</span>dt<span class="p">}</span> mt + b <span class="p">&amp;</span> <span class="k">\text</span><span class="p">{</span>from equation 3<span class="p">}</span> <span class="k">\\</span>
+   <span class="p">&amp;</span>= m
+<span class="nt">\end{align*}</span>
+</code></pre></div></div>
+<p><strong>Output:</strong>
+\(\begin{align*}
+    v(t) &amp;= \frac{d}{dt} x(t) \\
+    &amp;= \frac{d}{dt} mt + b &amp; \text{(from equation 3)} \\
+   &amp;= m
+\end{align*}\)</p>
+
+<p>What does <code class="language-plaintext highlighter-rouge">&amp;</code> mean in Tex? Noice how I achieved a similar result of <code class="language-plaintext highlighter-rouge">\tag</code> with <code class="language-plaintext highlighter-rouge">&amp;</code> to add a commentary to a step in a math equation.
+From writing a table (which I will introduce later), <code class="language-plaintext highlighter-rouge">&amp;</code> seems to represent a column.</p>
+
+<p><strong>Note:</strong> In tex, <code class="language-plaintext highlighter-rouge">*</code> tells tex compiler to not number the tag. For instance, 
+writing <code class="language-plaintext highlighter-rouge">\subsection</code> without <code class="language-plaintext highlighter-rouge">*</code> will create a numbered subsection. If you don’t want a numbered 
+subsection, then a <code class="language-plaintext highlighter-rouge">*</code> will be required. Similarly, <code class="language-plaintext highlighter-rouge">*</code> is added to align because we don’t want to 
+number each step in the equation since they do not have any significant meaning (i.e. we won’t be referencing that particular step in the future).</p>
+
+<hr />
+
+<p>Often times when working on a problem or deriving an equation, terms or units tend to cancel each other. It makes it a lot easier for the reader and yourself 
+if you explicitly strike those terms when the situation arises. That’s where the <code class="language-plaintext highlighter-rouge">cancel</code> or <code class="language-plaintext highlighter-rouge">\bcancel</code> command comes in.</p>
+
+<p>$\require{cancel} m = 5\bcancel{\text{g}} \cdot \frac{1kg}{1000\bcancel{\text{g}}}$</p>
+
+<p><strong>Note:</strong> If you are using Mathjax (such as I am for this post, you’ll need to write <code class="language-plaintext highlighter-rouge">\require{cancel}</code> enclosed in the same block that is in math mode.</p>
+
+<p>Another useful command when writing your lab or homework is the <code class="language-plaintext highlighter-rouge">\boxed{...}</code> command. <code class="language-plaintext highlighter-rouge">\boxed</code> is great to enclose your final answer or derivation 
+in a box to catch the readers’ attention.</p>
+
+<p><strong>Example:</strong></p>
+<div class="language-tex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">\begin{align*}</span>
+F <span class="p">&amp;</span>= ma
+<span class="p">&amp;</span>= 2 <span class="k">\cdot</span> (-9.8)
+<span class="p">&amp;</span>= <span class="k">\boxed</span><span class="p">{</span>-19.6N<span class="p">}</span>
+<span class="nt">\end{align*}</span>
+</code></pre></div></div>
+
+\[\begin{align*}
+F &amp;= ma \\
+&amp;= 2 \cdot (-9.8) \\
+&amp;= \boxed{-19.6N} \\
+\end{align*}\]
+
+<h2 id="observations-and-figures">Observations and Figures</h2>
+
+<p>A lab is not complete with a table of observations nor without figures. In Tex, to create a table, 
+use the tabular environment (i.e. <code class="language-plaintext highlighter-rouge">\begin{tabular}{c|c}...\end{tabular}</code>). The parameter to the tabular 
+environment is the number of columns you wish to have and the separator (should there be a line or space to separate the columns).
+For instance, let’s say we want to create a 3 column table with no borders:
+<strong>Example:</strong></p>
+<div class="language-tex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">\begin{tabluar}</span><span class="p">{</span>c c c<span class="p">}</span>
+cell1 cell2 cell3 <span class="k">\\</span>
+cell3 cell5 cell6 
+<span class="nt">\end{tabular}</span>
+</code></pre></div></div>
+
+<p><strong>Output:</strong>
+<img src="/assets/math-physics/tex-table-no-border.png" alt="An image of a table written in tex without borders" /></p>
+
+<p>But if we want to add borders between the columns, append a pipe symbol (<code class="language-plaintext highlighter-rouge">|</code> in between the columns). 
+However, we’ll also want a header to the table (i.e. column names). This can be achieved by using <code class="language-plaintext highlighter-rouge">\hline</code> 
+to draw a line to separate the headers from the body of the table.
+<strong>Example:</strong></p>
+<div class="language-tex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">\begin{tabular}</span><span class="p">{</span> c|c|c <span class="p">}</span>
+id <span class="p">&amp;</span> last <span class="p">&amp;</span> first <span class="k">\\</span>
+<span class="k">\hline</span>
+1 <span class="p">&amp;</span> Smith <span class="p">&amp;</span> John <span class="k">\\</span> 
+2 <span class="p">&amp;</span> Jane <span class="p">&amp;</span> Mary <span class="k">\\</span>  
+<span class="nt">\end{tabular}</span>
+</code></pre></div></div>
+<p><strong>Output:</strong>
+<img src="/assets/math-physics/tex-table.png" alt="An example of how a table in tex looks like" /></p>
+
+<p>Often times we will want to reference tables and have captions onto tables. That’s where <code class="language-plaintext highlighter-rouge">\caption</code> and <code class="language-plaintext highlighter-rouge">\label</code> come in. 
+A caption allows you to describe the table while label as previously mentioned, assigns a human-readable name to reference since numbering tables is a bad idea.
+Table labels typically have the prefix <code class="language-plaintext highlighter-rouge">tab:&lt;name&gt;</code> (i.e. <code class="language-plaintext highlighter-rouge">tab:density</code>). To use a caption and label, it must first be wrapped in another environment called 
+table.</p>
+
+<p><strong>Example:</strong></p>
+<div class="language-tex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">\begin{table}</span>[H]
+<span class="k">\caption</span><span class="p">{</span>The position of a remotely controlled car strolling down the hall starting from the principle's office<span class="p">}</span> 
+<span class="k">\label</span><span class="p">{</span>tab:position<span class="p">}</span>
+<span class="k">\centering</span>
+<span class="nt">\begin{tabular}</span><span class="p">{</span>c|c<span class="p">}</span>
+t(s) <span class="p">&amp;</span> distance(cm) <span class="k">\\</span>
+<span class="k">\hline</span>
+1 <span class="p">&amp;</span>  5<span class="k">\\</span>
+2 <span class="p">&amp;</span>  7<span class="k">\\</span>
+3 <span class="p">&amp;</span> 10 <span class="k">\\</span>
+4 <span class="p">&amp;</span> 14 <span class="k">\\</span>
+<span class="nt">\end{tabular}</span>
+<span class="nt">\end{table}</span>
+</code></pre></div></div>
+
+<p><img src="/assets/math-physics/tex-table-captions.png" alt="A table written in tex with caption and labels" /></p>
+
+<p><strong>Note:</strong> The position parameter (<code class="language-plaintext highlighter-rouge">[H]</code>) indicates where to place the contents of the environment. I typically use <code class="language-plaintext highlighter-rouge">H</code> to indicate to place 
+the contents of my tables and figures precisely at the location where the TEX code mentions it (you’ll need to add the <strong>float</strong> package).</p>
+
+<h2 id="labels-and-references">Labels and References</h2>
+
+<p>I have mentioned labels and references a few times in this post. Labels are not only great for their flexibility to 
+number equations, tables, and figures but also for their ability to create internal document links. In the digital age, 
+all documents should have links to different sections or areas in the document. It gives readers the ability to quickly 
+jump through the document quickly.</p>
+
+<p>One quick note before I give you an example of links inside documents, I want to introduce the command <code class="language-plaintext highlighter-rouge">hyperref</code>. For any 
+links you want to create, you’ll need to add the <strong>hyperref</strong> package (i.e. <code class="language-plaintext highlighter-rouge">\usepackage{hyperref}</code>). <code class="language-plaintext highlighter-rouge">\hyperref[label]{link text}</code> is 
+a useful command to create a link text that’s more than simply the reference number of the specific material. For instance,</p>
+
+<p><strong>Example:</strong></p>
+<div class="language-tex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">\hypersetup</span><span class="p">{</span>
+    colorlinks=true,
+    urlcolor=purple,
+    linkcolor=purple,
+<span class="p">}</span>
+<span class="nt">\begin{document}</span>
+<span class="k">\textbf</span><span class="p">{</span>Equation <span class="k">\ref</span><span class="p">{</span>eq:density<span class="p">}</span> v.s <span class="k">\hyperref</span><span class="na">[eq:density]</span><span class="p">{</span>Table <span class="k">\ref</span><span class="p">{</span>eq:density<span class="p">}}}</span>
+# the rest of the document is ommitted
+</code></pre></div></div>
+<p><img src="/assets/math-physics/tex-ref-vs-hyperref.png" alt="the difference between a ref and a hyperref in tex" /></p>
+
+<p>Click on equation <strong>\ref{eq:density}</strong> to jump to the density equation.</p>
+
+<hr />
+
+<h2 id="drawing-boxes-over-variables-of-two-equations-to-show-relationship">Drawing Boxes Over Variables of Two Equations to Show Relationship</h2>
+
+<p><strong>Required Package:</strong> <code class="language-plaintext highlighter-rouge">\usepackage{colortbl}</code> - for color</p>
+
+<p>There are times when you want to overlap two equations one below the other 
+and draw a box around the variables to show a relationship. One relationship 
+that comes to mind is the Beer-Lambert Law with the calibration curve 
+between the absorbance and the concentration of the color absorbing species.</p>
+
+<p><img src="/assets/math-physics/tex-boxes2.png" alt="An example of the relationship between Beer Lambert Law" /></p>
+
+<p>Inspired by this illustration, I decided to replicate the illustration for a 
+lab report I was writing on determining the acceleration of an object in free 
+fall.</p>
+
+<p><strong>Code:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>\begin{tabular}[t]{|c|}
+    \arrayrulecolor{red}
+    \firsthline
+     $A$ \\ $\frac{g}{2}$\\ \lasthline
+\end{tabular}
+\hspace{-1em}
+\begin{tabular}[t]{c}
+     $x^2 +$ \\  $t^2$ +\\
+\end{tabular}
+\hspace{-1em}
+\begin{tabular}[t]{|c|}
+    \arrayrulecolor{blue}
+    \firsthline
+     $B$ \\ $v_o$ \\ \lasthline
+\end{tabular}
+\hspace{-1em}
+\begin{tabular}[t]{c}
+     $x$ \\ $t$ \\ 
+\end{tabular}
+</code></pre></div></div>
+
+<p><strong>Output:</strong>
+<img src="/assets/math-physics/tex-boxes.png" alt="The illustration of acceleration with the line of best fit" /></p>
+
+<p>The idea is to construct tables (one per term) and draw borders on the columns 
+that you wish to highlight. In each cell, it’ll contain multiple lines, 
+a variable per line, separated with a newline from the command <code class="language-plaintext highlighter-rouge">\\</code> 
+and a horizontal line will be drawn over the cell using <code class="language-plaintext highlighter-rouge">\firsthline</code> 
+and <code class="language-plaintext highlighter-rouge">\lasthline</code> as seen above. To illustrate, if I want to draw the first box, 
+I would begin the “table” with a border and the two variables separated by a 
+newline.</p>
+
+<ol>
+  <li>Create a table with one column with a vertical border on the left and right 
+cell (i.e. <code class="language-plaintext highlighter-rouge">|c|</code>).</li>
+</ol>
+
+<p><strong>Code:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>\begin{tabular}[t]{|c|}
+     $A$ \\ 
+     $\frac{g}{2}$\\ 
+\end{tabular}
+</code></pre></div></div>
+
+<p><strong>Output:</strong>
+<img src="/assets/math-physics/tex-box-step1.png" alt="The table with two variables from different equations separated by a newline" /></p>
+
+<ol>
+  <li>Draw the top border with <code class="language-plaintext highlighter-rouge">\firsthline</code>:</li>
+</ol>
+
+<p><strong>Code:</strong></p>
+<div class="language-tex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">\begin{tabular}</span>[t]<span class="p">{</span>|c|<span class="p">}</span>
+    <span class="k">\firsthline</span>
+     <span class="p">$</span><span class="nb">A</span><span class="p">$</span> <span class="k">\\</span> 
+     <span class="p">$</span><span class="nv">\frac</span><span class="p">{</span><span class="nb">g</span><span class="p">}{</span><span class="m">2</span><span class="p">}$</span><span class="k">\\</span> 
+<span class="nt">\end{tabular}</span>
+</code></pre></div></div>
+
+<p><strong>Output:</strong>
+<img src="/assets/math-physics/tex-box-step2.png" alt="Adding a top border" /></p>
+
+<ol>
+  <li>Draw the bottom border with <code class="language-plaintext highlighter-rouge">\lasthline</code></li>
+</ol>
+
+<p><strong>Code:</strong></p>
+<div class="language-tex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">\begin{tabular}</span>[t]<span class="p">{</span>|c|<span class="p">}</span>
+    <span class="k">\firsthline</span>
+     <span class="p">$</span><span class="nb">A</span><span class="p">$</span> <span class="k">\\</span> 
+     <span class="p">$</span><span class="nv">\frac</span><span class="p">{</span><span class="nb">g</span><span class="p">}{</span><span class="m">2</span><span class="p">}$</span><span class="k">\\</span>
+     <span class="k">\lasthline</span>
+<span class="nt">\end{tabular}</span>
+</code></pre></div></div>
+
+<p><strong>Output:</strong></p>
+
+<p><img src="/assets/math-physics/tex-box-step3.png" alt="Adding a top border" /></p>
+
+<ol>
+  <li>Add color to the box with <code class="language-plaintext highlighter-rouge">\arrayrulecolor{red}</code></li>
+</ol>
+
+<p><strong>Code:</strong></p>
+<div class="language-tex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">\begin{tabular}</span>[t]<span class="p">{</span>|c|<span class="p">}</span>
+    <span class="k">\arrayrulecolor</span><span class="p">{</span>red<span class="p">}</span>
+    <span class="k">\firsthline</span>
+     <span class="p">$</span><span class="nb">A</span><span class="p">$</span> <span class="k">\\</span> 
+     <span class="p">$</span><span class="nv">\frac</span><span class="p">{</span><span class="nb">g</span><span class="p">}{</span><span class="m">2</span><span class="p">}$</span><span class="k">\\</span>
+     <span class="k">\lasthline</span>
+<span class="nt">\end{tabular}</span>
+</code></pre></div></div>
+<p><strong>Output:</strong>
+<img src="/assets/math-physics/tex-box-step4.png" alt="Adding color to the borders" /></p>
+
+<ol>
+  <li>Repeat and add another term. If you don’t want to highlight the variable, 
+then omit drawing column borders and drawing the top and bottom borders</li>
+</ol>
+
+<p><strong>Code:</strong></p>
+<div class="language-tex highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
+
+<p><strong>Output:</strong>
+<img src="/assets/math-physics/tex-box-step5.png" alt="Adding another term but with no focus (i.e. no box around it)" /></p>
+
+<p><strong>Notice</strong> how there’s a lot of space in between the variables. Remove the spacing by using <code class="language-plaintext highlighter-rouge">\hspace</code></p>
+
+<p><strong>Code:</strong></p>
+<div class="language-tex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">\begin{tabular}</span>[t]<span class="p">{</span>|c|<span class="p">}</span>
+    <span class="k">\arrayrulecolor</span><span class="p">{</span>red<span class="p">}</span>
+    <span class="k">\firsthline</span>
+     <span class="p">$</span><span class="nb">A</span><span class="p">$</span> <span class="k">\\</span> 
+     <span class="p">$</span><span class="nv">\frac</span><span class="p">{</span><span class="nb">g</span><span class="p">}{</span><span class="m">2</span><span class="p">}$</span><span class="k">\\</span>
+     <span class="k">\lasthline</span>
+<span class="nt">\end{tabular}</span>
+<span class="k">\hspace</span><span class="p">{</span>-1em<span class="p">}</span>
+<span class="nt">\begin{tabular}</span>[t]<span class="p">{</span>c<span class="p">}</span>
+     <span class="p">$</span><span class="nb">x</span><span class="p">^</span><span class="m">2</span><span class="nb"> </span><span class="o">+</span><span class="p">$</span> <span class="k">\\</span>  <span class="p">$</span><span class="nb">t</span><span class="p">^</span><span class="m">2</span><span class="p">$</span> +<span class="k">\\</span>
+<span class="nt">\end{tabular}</span>
+</code></pre></div></div>
+
+<p><strong>Output:</strong>
+<img src="/assets/math-physics/tex-box-step5.1.png" alt="Removing 1em of horizontal space between the terms" /></p>
+
+<hr />
+
+<h2 id="chemical-reaction">Chemical Reaction</h2>
+
+<p><strong>Package:</strong> <code class="language-plaintext highlighter-rouge">\usepackage[version=4]{mhchem}</code></p>
+
+<p>To draw a reaction, using <code class="language-plaintext highlighter-rouge">mhchem</code> package is useful. For instance,</p>
+
+<p><strong>Code:</strong></p>
+<div class="language-tex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">% ... everything before</span>
+<span class="k">\usepackage</span><span class="na">[version=4]</span><span class="p">{</span>mhchem<span class="p">}</span>
+<span class="nt">\begin{document}</span>
+<span class="k">\ce</span><span class="p">{</span>2H + O<span class="p">_</span>2 -&gt; 2H<span class="p">_</span>2O<span class="p">}</span>
+<span class="c">% ... everything after</span>
+</code></pre></div></div>
+
+<p><strong>Output:</strong></p>
+
+<p><img src="/assets/math-physics/tex-chem-forumla.png" alt="H_2O Chemical reaction from H + O_2" /></p>
+
+<p>Though the reaction arrow is quite long. There are ways to tweak it but I think 
+I’ll keep using this package till I find a need to use another package or 
+method to draw the reaction. (i.e. I have yet to use this package for my labs).</p>
+
+<hr />
+
+<h2 id="citation-using-bibtex">Citation Using BibTex</h2>
+
+<p>Often times when writing reports, you need to reference outside knowledge or give acknowledgement of the idea or owner 
+to someone. That is where <a href="htt//www.bibtex.org/">BibTex</a> comes in handy. BibTex makes citation very simple 
+being able to convert your references in different styles very quickly (i.e. from APA to IEEE for instance). All you need to 
+do is provide a BibTex file (extension: <strong>.bib</strong>) that contains metadata to your references such as the one below:</p>
+
+<div class="language-bib highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">@manual</span><span class="p">{</span><span class="nl">lab</span><span class="p">,</span>
+  <span class="na">title</span>         <span class="p">=</span> <span class="s">"Oscilloscope Experiment"</span><span class="p">,</span>
+  <span class="na">organization</span>  <span class="p">=</span> <span class="s">"Carleton University"</span><span class="p">,</span>
+  <span class="na">year</span>          <span class="p">=</span> <span class="s">"2022"</span><span class="p">,</span>
+  <span class="na">author</span>        <span class="p">=</span> <span class="s">"Maria Paula Rozo Martinez"</span><span class="p">,</span>
+<span class="p">}</span><span class="c">,</span>
+
+<span class="nc">@manual</span><span class="p">{</span><span class="nl">uncertainty</span><span class="p">,</span>
+    <span class="na">title</span> <span class="p">=</span> <span class="s">"Measurements and Experimental Uncertainties"</span><span class="p">,</span>
+    <span class="na">organization</span> <span class="p">=</span> <span class="s">"Carleton University"</span><span class="p">,</span>
+    <span class="na">year</span> <span class="p">=</span> <span class="s">"2022"</span><span class="p">,</span>
+    <span class="na">author</span> <span class="p">=</span> <span class="s">"Etienne Rollin"</span>
+<span class="p">}</span>
+
+<span class="nc">@misc</span><span class="p">{</span><span class="nl">humidity</span><span class="p">,</span>
+    <span class="na">title</span> <span class="p">=</span> <span class="s">"Static Electricity"</span><span class="p">,</span>
+    <span class="na">organization</span> <span class="p">=</span> <span class="s">"Airtec Solutions"</span><span class="p">,</span>
+    <span class="na">howpublished</span> <span class="p">=</span> <span class="s">{\url{http//airtecsolutions.com/blog/airtec-blog/airtec-blog/static-electricity}}</span><span class="p">,</span>
+    <span class="na">note</span> <span class="p">=</span> <span class="s">{Accessed: 2022-05-27}</span>
+<span class="p">}</span>
+
+<span class="nc">@article</span><span class="p">{</span><span class="nl">esd</span><span class="p">,</span>
+    <span class="na">title</span> <span class="p">=</span> <span class="s">{THE ``REAL'' COST OF ESD DAMAGE}</span><span class="p">,</span>
+    <span class="na">author</span> <span class="p">=</span> <span class="s">{"Terry Welsher"}</span><span class="p">,</span>
+    <span class="na">journal</span> <span class="p">=</span> <span class="s">"InCompliance"</span><span class="p">,</span>
+    <span class="na">publisher</span> <span class="p">=</span> <span class="s">"publisher"</span><span class="p">,</span>
+    <span class="na">year</span> <span class="p">=</span> <span class="s">"2010"</span><span class="p">,</span>
+    <span class="na">month</span> <span class="p">=</span> <span class="s">"June"</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Then in your Tex File, you can add the following to indicate you wish to have your references generated using a specific 
+style (IEEE in this case) and the bibTex file to look at (i.e. <code class="language-plaintext highlighter-rouge">sample.bib</code>):</p>
+
+<div class="language-tex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="k">\bibliographystyle</span><span class="p">{</span>IEEEtran<span class="p">}</span>
+<span class="k">\bibliography</span><span class="p">{</span>sample<span class="p">}}</span>
+</code></pre></div></div>
+
+<p><img src="/assets/math-physics/tex-references.png" alt="An image of the references section being generated" /></p>
+
+<h3 id="intext-citation">Intext Citation</h3>
+
+<p>Intext citation is very simple using bibtex, all you need to use is the <code class="language-plaintext highlighter-rouge">\cite{}</code> command with the tag associated to the 
+reference you wish to cite.</p>
+
+<div class="language-tex highlighter-rouge"><div class="highlight"><pre class="highlight"><code>While copper is a great metal due to its low resistivity, the weight and 
+cost of copper makes it non-economical for overhead power lines <span class="k">\cite</span><span class="p">{</span>powerline<span class="p">}</span>
+</code></pre></div></div>
+
+<p><img src="/assets/math-physics/tex-intext-cite.png" alt="An image of how the in-text citation looks like using IEEE style" /></p>
+
+<hr />
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>I hope the material presented is useful to you. I’ll edit this post once I have time with the link to a generic template I plan on using 
+for my Physics course. It may be useful for anyone who uses a similar structure to CarletonU Physics (I won’t be surprised if my school already has a tex template).</p>
+
+<p><img src="/assets/math-physics/tex-anime2.png" alt="Tex in Fireforce" /></p>
+
+  </div>
+
+    </div>
+    </div>
+
+  <footer>
+  <marquee id = "buttons">
+    <a href = "index.html"><img src = "/assets/buttons/button.png"></a>
+    <a href = "index.html"><img src = "/assets/buttons/button2.png"></a>
+    <a href = 'https://neocities.org/'><img src = "/assets/buttons/neocitiesorg.gif"></a>
+    <a href = 'https://www.vim.org/'><img src = "/assets/buttons/vim.gif"></a>
+    <a href = 'https://fedoraproject.org/'><img src = "/assets/buttons/gnu-linux.gif"></a>
+  </marquee>
+</footer>
+
+
+  </body>
+</html>
