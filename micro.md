@@ -66,7 +66,14 @@ So, I’ve decided that this corner will be a microblog where I can share random
 <p/>
 
 <b>How are my studies going?</b><br/>
-<p>I’m still studying Mathematics, but I’ve lost much of my initial interest in the field after taking a few third-year courses. I ended up taking fewer Math courses, which puts my ability to graduate on time at risk. Listening to lectures and reading about abstract groups and rings made me really miss programming and computer science. Despite this, there were still some Math courses I enjoyed, such as Combinatorics and Real Analysis. However, I didn’t last long in the follow-up Real Analysis courses that covered Stone-Weierstrass and Commutative C* Algebra. Feeling tired of abstract Mathematics, I decided to take a break and pursue an internship at a telecommunications enterprise.</p>
+<p>
+I’m still studying Mathematics, but I’ve lost much of my initial interest in the field after taking a few third-year courses. 
+I ended up taking fewer Math courses, which puts my ability to graduate on time at risk. 
+Listening to lectures and reading about abstract groups and rings made me really miss programming and computer science. 
+<img src = "{{site.baseurl}}/assets/gifs/onion/study-confused.gif"/>
+Despite this, there were still some Math courses I enjoyed, such as Combinatorics and Real Analysis. 
+However, I didn’t last long in the follow-up Real Analysis courses that covered Stone-Weierstrass and Commutative C* Algebra. 
+Feeling tired of abstract Mathematics, I decided to take a break and pursue an internship at a telecommunications enterprise.</p>
 
 <img src = "{{ site.baseurl }}/assets/gifs/graph-retro-computer.webp" alt = "retro computer fiddling with excel"/>
 

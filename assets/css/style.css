@@ -10,6 +10,19 @@ body {
   margin: 0px;
 }
 
+ul {
+  margin: 0;
+}
+
+.ul-title {
+  margin-bottom: .25em;
+}
+
+.ul-p {
+  display: block;
+  margin-bottom: -1em;
+}
+
 nav {
     grid-column: col-start/span 12;
     grid-row: 1;
