@@ -1,7 +1,52 @@
 ---
-layout: default
+layout: page
 title: µBlog
+permalink: micro
 ---
+
+<a name = "extern">
+<div class = 'bits'><h2 class = 'title'>Editing GIFS and Creating 88x31 Buttons</h2><p class = 'date'>2024-08-18</p>
+
+Lately I have been learning how to edit GIFS and it is painstaking difficult to remove a background from a GIF without using an 
+AI tool, especially when the image has over 70 frames. There is likely an easier way to edit GIFs but I had to manually edit over 50 
+frames, erasing the clouds from a GIF using the eraser tool frame by frame which took some time to finish. <br/>
+
+<b>Original:</b>
+
+<div class="tenor-gif-embed" data-postid="26494068" data-share-method="host" data-aspect-ratio="2.19178" data-width="100%"><a href="https://tenor.com/view/flying-pikachu-transparent-balloon-pikachu-pokemon-yellow-pikachu-pokemon-gif-26494068">Flying Pikachu Transparent Balloon Pikachu Sticker</a>from <a href="https://tenor.com/search/flying+pikachu+transparent-stickers">Flying Pikachu Transparent Stickers</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+
+<b>Result:</b>
+
+<img src = "{{ site.baseurl }}/assets/gifs/flying-pikachu-3.gif">
+
+However, if you are not editing a GIF 
+but rather trying to incorporate the GIF into your 88x31 buttons, it turns out to be quite simple. Following the instructions from 
+<a href = "https://www.youtube.com/watch?v=3XfrnY4mb5o">a video on Youtube</a>, I managed to create a few simple 88x31 buttons that have 
+features cats, coffee, and the two programs I am or finished studying (i.e. doing a 2nd degree):
+
+<div class = "quick-badges">
+<div><img src = "pixel button for coffee" src = "{{ site.baseurl }}/assets/buttons/coffee-powered.gif"></div>
+<div><img src = "pixel button for chi cat cs major" src = "{{ site.baseurl }}/assets/buttons/cs-cat.gif"></div>
+<div><img src = "pixel button for confused cat in math" src = "{{ site.baseurl }}/assets/buttons/math-major.gif"></div>
+</div>
+
+To resize the gifs, I used <a href = "https://ezgif.com/resize">ezgif resize tool</a> to set the height to be 31px since I didn't know 
+how to resize GIFs on GIMP as it would open a bunch of layers. I guess I could have used ffmpeg but using an online tool is just more 
+convenient and easier. I do wonder if there are other standard anti-pixel button sizes aside from 80x15 pixels because a height of 
+31 pixels is quite limiting. It's amazing what the community has been able to do with such limiting number of pixels.
+
+<div class = "quick-badges">
+<div><img src = "pixel button for C Programming" src = "{{ site.baseurl }}/assets/buttons/c.png"></div>
+<div><img src = "pixel button for Perl" src = "{{ site.baseurl }}/assets/buttons/perl.png"></div>
+<div><img src = "pixel button for Bash" src = "{{ site.baseurl }}/assets/buttons/bash.png"></div>
+<div><img src = "pixel button for LATEX" src = "{{ site.baseurl }}/assets/buttons/latex.png"></div>
+</div>
+
+For instance, the Bash button I have made has the subtitle "THE BOURNE-AGAIN SHELL" which is very hard to make out. I am assuming the standard 
+practice is to render the button as a GIF and display the text on the next frame. That way users would be able to see the full-text.
+
+</div>
+<hr class = 'bits-hr'/>
 
 <a name = "extern">
 <div class = 'bits'><h2 class = 'title'>multiple definition of `variable` ... first defined here</h2><p class = 'date'>2024-08-10</p>

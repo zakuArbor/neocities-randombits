@@ -1,6 +1,7 @@
 ---
-layout: default
+layout: page
 title: "About"
+permalink: /about.html
 ---
 # About
 
@@ -27,11 +28,32 @@ I maintain a blog focusing on programming and hopefully math at <a href = "https
 * Vim is a great text editor
 * I study Math and yes I unfortunately learned too late that studying Math is not a pleasant way to kill time
 
+<hr/>
+
+## Short Bits
+
+<div class = "quick-badges">
+
+<div><img src = "pixel button for coffee" src = "{{ site.baseurl }}/assets/buttons/coffee-powered.gif"></div>
+<div><img src = "pixel button for chi cat cs major" src = "{{ site.baseurl }}/assets/buttons/cs-cat.gif"></div>
+<div><img src = "pixel button for confused cat in math" src = "{{ site.baseurl }}/assets/buttons/math-major.gif"></div>
+<div><img src = "pixel button for Pokemon taken from meltingsnow" src = "{{ site.baseurl }}/assets/buttons/pokemon-meltingsnow.gif"></div>
+<div><img src = "pixel button for Fedora OS" src = "{{ site.baseurl }}/assets/buttons/powered_by_fedora_alt.png"/></div>
+<div><img src = "pixel button for VIM" src = "{{ site.baseurl }}/assets/buttons/vim.gif"/></div>
+<div><img src = "pixel button for firefox" src = "{{ site.baseurl }}/assets/buttons/firefox.gif"></div>
+<div><img src = "pixel button for GNU/Linux" src = "{{ site.baseurl }}/assets/buttons/gnu-linux.gif"></div>
+<div><img src = "pixel button for C Programming" src = "{{ site.baseurl }}/assets/buttons/c.png"></div>
+<div><img src = "pixel button for Perl" src = "{{ site.baseurl }}/assets/buttons/perl.png"></div>
+<div><img src = "pixel button for Bash" src = "{{ site.baseurl }}/assets/buttons/bash.png"></div>
+<div><img src = "pixel button for LATEX" src = "{{ site.baseurl }}/assets/buttons/latex.png"></div>
+
+</div>
+
 <b class = "ul-p">Notes:</b> 
 <ul class>
 <li>¹Wired or digital world, whatever you prefer</li>
 <li>²Random in any context I write should not be taken as true randomness unless explicitly stated in the context</li>
-<li>I am no expert and all opinions are my own and do not represent any society, instiution nor employer</li>
+<li>I am no expert and all opinions are my own and do not represent any instiution nor employer I am associated with</li>
 </ul>
 
 <p class = "last-edit"><b>Last Major Edit:</b> 2024-08-12</p> 

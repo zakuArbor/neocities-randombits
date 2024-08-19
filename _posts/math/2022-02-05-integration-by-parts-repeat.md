@@ -3,6 +3,7 @@ layout: math-default
 title: Solving Repeating Integration by Parts through Isolation
 description: A technique to solve repeating integration by parts by isolation.
 categories: [math]                                                
+permalink: /blog/:title
 ---
 
 Currently, I am enrolled in a Calculus course named Calculus and Introductory Analysis II this semester where I get to revisit

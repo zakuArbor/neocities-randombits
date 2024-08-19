@@ -3,6 +3,7 @@ layout: math-default
 title: Random Thoughts About Circles
 description: Random Thoughs About Circles. Mainly random babbles to fullfill a blogging quota if I cannot come with something.
 categories: [math, trig, linear-algebra]
+permalink: /blog/:title
 ---
 
 Today's post is a filler post in case I cannot think of anything to write for the month. It's a babble of my thoughts on a circle, a very simple 

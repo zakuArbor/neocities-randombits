@@ -3,6 +3,7 @@ layout: math-default
 title: Deriving Double Angles through Matrix Rotations Animation Preview
 description: A preview of an animated video on how to derive double angles through matrix rotations
 categories: [math, trig, linear-algebra]
+permalink: /blog/:title
 ---
 
 [In my previous blog post discussing about double angles and its relation with matrix rotations](../double-angle-rot), I explored 

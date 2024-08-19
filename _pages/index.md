@@ -1,11 +1,11 @@
 ---
-layout: default
+layout: page
 title: "Random Bits"
 date: 2024-08-12
+permalink: /
 ---
-
-## Welcome to yet another random website
-
+<!--<h2><img src = "{{site.baseurl}}/assets/gifs/pikachu-wave.gif" style = "float:left; margin-right: 1em;">Welcome to yet another random website</h2>-->
+<h2 id = "page-title"><img id = "pikachu-title" src = "{{site.baseurl}}/assets/gifs/pikachu-wave.gif">Welcome to yet another random website</h2>
 A random website in cyberspace (or the wired) written by a random human on planet Earth. 
 Random bits is a personal outlet to talk about random bits of things that is going in my mind and life.
 

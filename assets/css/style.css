@@ -6,6 +6,7 @@ body {
   background-color: #22272e;
   color: #c8cbcf;
 /*  font-family: Verdana;*/
+  font-family: Droid Sans;
   font-size: 1.25em;
   margin: 0px;
 }
@@ -26,6 +27,19 @@ ul {
 nav {
     grid-column: col-start/span 12;
     grid-row: 1;
+}
+
+#pikachu-header {
+  position: relative;
+  top: 1em;
+  left: .25em;
+}
+
+#pikachu-title {
+  position: relative;
+  float:left; 
+  margin-right: 1em !important;
+  margin-top:.25em !important;
 }
 
 nav,
@@ -75,15 +89,25 @@ nav {
 
 a, a:visited {
   color: #00ace6;
+  text-decoration: none;
 }
 
-a:visited {
-  text-decoration: none;
+a:hover{
+  text-decoration: underline;
 }
 
 #linux {
   font-weight:bold;
   font-size: 55px;
+}
+
+.quick-badges {
+  display: grid;
+  grid-template-columns: 88px 88px 88px 88px;
+  grid-gap: 5px;
+  margin: auto;
+  text-align: center;
+  justify-content: center;
 }
 
 .pane-dual-row, .pane-dual {
@@ -243,7 +267,6 @@ blockquote {
 }
 
 header {
-  padding-top: 1em;
   margin-bottom: 10px;
   background-color: #1a1a1a;
   border-bottom: 2px solid;
@@ -266,7 +289,21 @@ footer {
   padding-bottom: 10px;
 }
 
-@media only screen and (min-width: 650px) { 
+#discuss {
+  margin-top: 20px;
+}
+
+@media only screen and (min-width: 700px) { 
+  header, footer, #wrapper {
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+  }
+  #buttons {
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width: 850px) { 
   header, footer, #wrapper {
     padding-left: 10%;
     padding-right: 10%;
@@ -288,12 +325,37 @@ footer {
   }
 }
 
+@media only screen and (max-width: 750px) {
+  #pikachu-header {
+    display: none;
+  }
+
+  #content {
+    padding: .5em;
+    border: 0px;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .pane-dual {
     flex-direction: column;
   }
-  #content {
+
+  #page-title {
+    text-align: center;
+  }
+
+  #pikachu-title {
+    margin-right: 0em !important;
+  }
+
+
+  #content, #discuss {
     padding: .5em;
     border: 0px;
+  }
+
+  header {
+    padding: 2px;
   }
 }

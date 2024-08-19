@@ -3,6 +3,7 @@ layout: math-default
 title: Deriving Double Angles through Matrix Rotations
 description: A simple illustration of deriving double angles
 categories: [math, trig, linear-algebra]
+permalink: /blog/:title
 ---
 
 A while back I decided to pick up [Math Girls by Hiroshi Yuki](http://bentobooks.com/mathgirls/) and one of the 

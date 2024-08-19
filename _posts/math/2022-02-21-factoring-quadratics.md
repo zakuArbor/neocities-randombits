@@ -3,6 +3,7 @@ layout: math-default
 title: Another Look at Factoring Quadratics Into A Product of Binomials
 description: Going through how quadratic factoring
 categories: [math]                                                
+permalink: /blog/:title
 ---
 
 In Highschool, we learned about how to find the roots of a quadratic equation which 
