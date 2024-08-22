@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Random Bits"
-date: 2024-08-12
+date: 2024-08-22
 permalink: /
 ---
 <!--<h2><img src = "{{site.baseurl}}/assets/gifs/pikachu-wave.gif" style = "float:left; margin-right: 1em;">Welcome to yet another random website</h2>-->
@@ -21,9 +21,9 @@ Random bits is a personal outlet to talk about random bits of things that is goi
 * [[Jan 14] Real Analysis 1](https://zakuarbor.github.io/blog/math3001/)
 
 ### Change Log
-
-2024-08-12: Copied over every Math webpages from <a href = "https://zakuarbor.github.io/blog/">personal blog</a>
-<br/>
-2024-08-12: Migrated website to Jekyll
+* 2024-08-22: redesigned microblog section to utilize Jekyll more effectively
+* 2024-08-18: Added banner gif and more 88x31 buttons
+* 2024-08-12: Copied over every Math webpages from <a href = "https://zakuarbor.github.io/blog/">personal blog</a>
+* 2024-08-12: Migrated website to Jekyll
 
 <b>Last Major Edit:</b> {{ page.date | date: "%Y-%m-%d" }}

@@ -56,4 +56,4 @@ I maintain a blog focusing on programming and hopefully math at <a href = "https
 <li>I am no expert and all opinions are my own and do not represent any instiution nor employer I am associated with</li>
 </ul>
 
-<p class = "last-edit"><b>Last Major Edit:</b> 2024-08-12</p> 
+<p class = "last-edit"><b>Last Major Edit:</b> 2024-08-18</p> 
