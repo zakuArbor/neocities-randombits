@@ -1,7 +1,7 @@
 ---
 layout: micro
 title: Replacing main()
-date: 2024-08-22
+date: 2024-08-24
 categories: [micro, gcc, c]
 permalink: micro/2024/08/:title
 ---
@@ -41,6 +41,35 @@ first entry point of the C code and the binary).
 start address <font color="#C01C28"><b>0x0000000000401136</b></font>
 <font color="#D0CFCC"><b>$ </b></font>nm ./a.out | grep foo
 <b><font color="#C01C28">0000000000401136 T</font></b> foo</code></pre>
+
+### Few Notes
+1. You must define `main()` even if it's not going to be used. [CPP Reference](https://en.cppreference.com/w/c/language/main_function) states 
+this explicitly:
+> Every C program coded to run in a hosted execution environment contains the definition (not the prototype) of a function named main, which is the designated start of the program. 
+
+    Neglecting to define `main` results in an error like the following:
+```
+$ gcc foo.c
+/usr/bin/ld: /usr/lib/gcc/x86_64-redhat-linux/14/../../../../lib64/crt1.o: in function `_start':
+(.text+0x1b): undefined reference to `main'
+collect2: error: ld returned 1 exit status
+```
+
+2. The C program entry must call `exit()` to terminate if it is not `main()` or else a segfault will occur
+```
+$ ./a.out 
+Called foo
+Segmentation fault (core dumped)
+```
+
+    a backtrace via gdb won't give much information as to why. Probably best to consult with glibc. Essentially it is likely due to the fact 
+that `_start` calls `exit` to terminate the program which probably does some cleaning via `atexit` and set the exit status `$?` to some value.
+```
+(gdb) bt 
+#0  0x0000000000000001 in ?? ()
+#1  0x00007fffffffdd46 in ?? ()
+#2  0x0000000000000000 in ?? ()
+```
 
 ### Random Links for later Research
 * https://vishalchovatiya.com/posts/crt-run-time-before-starting-main/

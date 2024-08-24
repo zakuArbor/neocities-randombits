@@ -5,7 +5,6 @@ date: 2024-08-04
 categories: [micro, framework, powerpc]
 permalink: micro/2024/08/:title
 ---
-<a name = "{{:title}}">
 Framework is a company that makes modular and repairable laptops that has captured the interests of tech enthusiasts over the past 4 years. 
 Currently Framework laptops are limited to x86-64 architecture supporting Intel and later AMD CPUs in 2023. Although Framework laptops are not 
 entirely open source, they have <a href = "https://github.com/FrameworkComputer">open source a decent chunk of their work</a> from my understanding and 

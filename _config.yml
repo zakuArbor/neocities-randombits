@@ -4,3 +4,4 @@ title: "RANDOM BITS" # the name of your site, e.g. ACME Corp.
 
 permalink: /:year/:month/:title
 include: ['_pages']
+highlighter: rouge

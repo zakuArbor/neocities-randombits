@@ -7,7 +7,6 @@ shorturl: multiple-def
 permalink: micro/2024/08/multiple-def
 ---
 
-<a name = ":title">
 Randomly I decided to compile some old projects I worked on and I was surprised to see a few 
 compilation errors in an assembler I wrote years back. As it has been many years since I last touched most of the projects I looked at, I was 
 pleased to see the compiler catching obvious mistakes I had made in the past. Though this did come to a surprise as to why the compiler I used 
