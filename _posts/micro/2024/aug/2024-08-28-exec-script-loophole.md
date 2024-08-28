@@ -1,7 +1,7 @@
 ---
 layout: micro
 title: Executing Script Loophole
-date: 2024-08-24
+date: 2024-08-28
 categories: [micro, script, linux]
 permalink: micro/2024/08/:title
 ---
