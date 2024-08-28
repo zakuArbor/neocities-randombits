@@ -29,3 +29,6 @@ and fed them to the interpreter due to laziness (I know it's a one time thing to
 The article covers some promising approaches so I do expect a solution to be merged into the kernel sometime in the near future which will 
 force me to change my habits once the interpreters make the change. Though if interpreters do make this patch, I do expect quite a few 
 production and CI/CD servers to be impacted as there will always be someone like me who are lazy to set the execute bit on our scripts.
+
+One benefit of closing this loophole is to force users to deliberately make the conscious choice to set the execute bit similar to how we have to 
+set the flatpaks we download as executables (at least from my personal experience) before we can execute the flatpaks.

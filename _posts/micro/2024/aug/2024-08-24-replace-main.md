@@ -63,7 +63,8 @@ Segmentation fault (core dumped)
 ```
 
     a backtrace via gdb won't give much information as to why. Probably best to consult with glibc. Essentially it is likely due to the fact 
-that `_start` calls `exit` to terminate the program which probably does some cleaning via `atexit` and set the exit status `$?` to some value.
+that `_start` is not a function that returns in the stack. It calls `exit` to terminate the program which probably does some cleaning via `atexit` 
+and set the exit status `$?` to some value.
 ```
 (gdb) bt 
 #0  0x0000000000000001 in ?? ()
@@ -74,3 +75,4 @@ that `_start` calls `exit` to terminate the program which probably does some cle
 ### Random Links for later Research
 * https://vishalchovatiya.com/posts/crt-run-time-before-starting-main/
 * https://www.gnu.org/software/hurd/glibc/startup.html
+* https://stackoverflow.com/questions/63543127/return-values-in-main-vs-start

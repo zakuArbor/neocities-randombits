@@ -10,9 +10,19 @@ A random website in cyberspace (or the wired) written by a random human on plane
 Random bits is a personal outlet to talk about random bits of things that is going in my mind and life.
 
 ### Latest µBlog 
-* [[2024-08-10] multiple definition of `variable` ... first defined here]({{ site.baseurl }}/micro.html#extern)
-* [[2024-08-04] Delusional Dream of a OpenPower Framework Laptop]({{ site.baseurl }}/micro.html#framework-power)
-* [[2024-08-04] 2024 Update]({{ site.baseurl }}/micro.html#2024-update)
+<ul>
+{% assign i = 0 %}
+{% for post in site.posts %}
+    {% if post.categories contains 'micro'%}
+        {% assign i = i | plus: 1 %}
+        {% if i == 5 %}
+            {% break %}
+        {% endif %}
+        {% assign shorturl = post.id | split: "/" | last %}
+        <li><a href = '..{{ post.url }}'>[{{ post.date | date: "%Y-%m-%d" }}] {{ post.title }}</a></li>
+    {% endif %}
+{% endfor %}
+</ul>
 
 ### Latest Blog 
 * [[June 22] Polluting the Web With a Useless 5 argument main function](https://zakuarbor.github.io/blog/useless-main/)
