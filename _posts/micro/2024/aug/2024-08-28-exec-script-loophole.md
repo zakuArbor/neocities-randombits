@@ -9,7 +9,7 @@ permalink: micro/2024/08/:title
 I recently came across an [article](https://lwn.net/Articles/982085/) discussing an attempt to close a loophole bypassing the normal 
 execution permission bit. Exploiting a program suid and euid to gain high privilige is a commonly known technique called privilege 
 escalation. This article does not cover this but it introduces a flaw in the current way Linux handles the execution of scripts. I 
-do not know why privilige escalation came to my mind but as I wrote nonesense, I shall keep it here for now. The article gives a neat 
+do not know why privilige escalation came to my mind but as I usually write nonesensical things anyways, I shall keep it here for now. The article gives a neat 
 example where a script does not have execution bit but is still executable by invoking the script via an interpreter.
 
 ```
