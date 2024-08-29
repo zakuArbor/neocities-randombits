@@ -293,6 +293,64 @@ footer {
   margin-top: 20px;
 }
 
+.caption {
+  font-size: small;
+  line-height: 1em;
+}
+
+.dual-image-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.dual-image-container .caption {
+  text-align: center;
+}
+
+.update-chat {
+  background-color: #0d1117;
+  width: 100%;
+  height: 200px;
+  overflow: auto;
+  font-size: .875rem;
+  color: #caccce;
+}
+
+.update-chat .pfp {
+  width: 2.75em;
+  height: 2.75em;
+  margin: 0 !important;
+  float: left;
+  margin-right: 5px !important;
+}
+
+.update-chat .msg {
+  position: relative;
+  clear: both;
+  padding: 0.2em;
+  word-wrap: break-word;
+  margin: 4px;
+  margin-bottom: 6px;
+  line-height: 1.4em;
+  background-color: #37336f;
+}
+
+.update-chat .date {
+  float: right;
+}
+
+.update-chat .name {
+  display: inline;
+  padding-right: 0.5em;
+  font-weight: 300;
+}
+
+.update-chat .body {
+  word-wrap: break-word;
+  line-height: 1.4em;
+}
+
+
 @media only screen and (min-width: 700px) { 
   header, footer, #wrapper {
     padding-left: 2.5%;
@@ -334,6 +392,7 @@ footer {
     padding: .5em;
     border: 0px;
   }
+
 }
 
 @media only screen and (max-width: 600px) {

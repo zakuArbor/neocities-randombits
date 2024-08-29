@@ -31,9 +31,41 @@ Random bits is a personal outlet to talk about random bits of things that is goi
 * [[Jan 14] Real Analysis 1](https://zakuarbor.github.io/blog/math3001/)
 
 ### Change Log
-* 2024-08-22: redesigned microblog section to utilize Jekyll more effectively
-* 2024-08-18: Added banner gif and more 88x31 buttons
-* 2024-08-12: Copied over every Math webpages from <a href = "https://zakuarbor.github.io/blog/">personal blog</a>
-* 2024-08-12: Migrated website to Jekyll
+
+<div class = "update-chat">
+<div class = "msg">
+    <img class = "pfp" src = "{{ site.baseurl }}/assets/images/pikachu_pfp.png">
+    <div class = "date">2024-08-29</div>
+    <div class = "name">zakuarbor</div>
+    <div class = "body">Redesign Change Log to resemble a chat</div>
+</div>
+
+<div class = "msg">
+    <img class = "pfp" src = "{{ site.baseurl }}/assets/images/pikachu_pfp.png">
+    <div class = "date">2024-08-22</div>
+    <div class = "name">zakuarbor</div>
+    <div class = "body">Redesigned microblog to utilize Jekyll more</div>
+</div>
+
+<div class = "msg">
+    <img class = "pfp" src = "{{ site.baseurl }}/assets/images/pikachu_pfp.png">
+    <div class = "date">2024-08-18</div>
+    <div class = "name">zakuarbor</div>
+    <div class = "body">Added banner image and more 88x31 buttons</div>
+</div>
+
+<div class = "msg">
+    <img class = "pfp" src = "{{ site.baseurl }}/assets/images/pikachu_pfp.png">
+    <div class = "date">2024-08-12</div>
+    <div class = "name">zakuarbor</div>
+    <div class = "body"><s>Plagiarized</s> Copied all Math Webpages from <a href = "https://zakuarbor.github.io/blog/">my personal blog</a></div>
+</div>
+<div class = "msg">
+    <img class = "pfp" src = "{{ site.baseurl }}/assets/images/pikachu_pfp.png">
+    <div class = "date">2024-08-12</div>
+    <div class = "name">zakuarbor</div>
+    <div class = "body">Migrated website to Jekyll</div>
+</div>
+</div>
 
 <b>Last Major Edit:</b> {{ page.date | date: "%Y-%m-%d" }}
