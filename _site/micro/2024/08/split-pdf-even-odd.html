@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>Splitting Pdfs into Even and Odd Pages - RANDOM BITS</title>
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.cdnfonts.com/css/common-pixel" rel="stylesheet">
+    <link href="/assets/css/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/assets/css/syntax_monokai.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="icon" type="image/png" href="/assets/site/random-bits-favicon.png">
+    <meta name="og:title" content="Random Bits">
+    <meta name="og:image" content="">
+    <meta name="og:description"
+        content="Random bits of programming, math, and personal thoughts">
+    <meta name="keywords" content="zakuarbor, programming, math, random bits, pikachu">
+    <meta name="description" content="Random bits of programming, math, and personal thoughts">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script charset="utf-8" src="/assets/js/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+  </script>
+  <header>
+    <center>
+      <h1 id = "title"><a href = "index.html">RANDOM BITS</a><img id = "pikachu-header" src = "/assets/site/flying-pikachu.png"/></h1>
+    A random site by a random clueless human
+    </center>
+    <marquee scrollamount="4">
+      Random bits of programming, math, and thoughts
+      By a clueless human
+      &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+      Random bits of programming, math, and thoughts
+      By a clueless human
+    </marquee>
+
+    <a href="javascript:void(0);" class="hamburger-nav" onclick="toggleMenu()"><i class="fa fa-bars"></i></a>
+    <nav id="header-nav">
+    <center>
+      <a href="/index.html">Home</a>
+      <a href="/micro.html"><span style = "letter-spacing: 1px;">µ</span>Blog</a>
+      <a href="/math.html">Math</a>
+      <a href="/about.html">About</a>
+    </center>
+    </nav>
+    </header>
+
+
+  </head>
+  <body>
+
+    <div id = "wrapper">
+    <div id = "content">
+<div class = "bits">
+  <h1 class = "title">Splitting Pdfs into Even and Odd Pages</h1>
+
+  <div>
+    <p class = "date">August 28, 2024</p>
+    
+    <div class="tags">
+      
+      
+        <a href="/categories/#micro">micro</a>
+        &nbsp;
+      
+        <a href="/categories/#printer">printer</a>
+        &nbsp;
+      
+        <a href="/categories/#pdf">pdf</a>
+        &nbsp;
+      
+        <a href="/categories/#utilities">utilities</a>
+        
+      
+    </div>
+  </div>
+  <p>During the winter break I have obtained an old Xerox XE88 Workstation Printer released in the year of 2000, the year where the media were 
+worried about Y2K causing havok to our digital infrastructure which never came to the scale we all feared thankfully. Though of course 
+<a href="https://en.wikipedia.org/wiki/2024_CrowdStrike_incident">a bug will eventually will creep and wreck havok</a>(i.e. Crowdstrike Falcon Update). 
+But I digress, using this printer was filled with frustration as it is a relic from the past that is not meant to be used in 2024. 
+Firstly, the printer requires a parallel port which no modern computer comes equip with. I have to drag out my last surviving desktop from my childhood that originally came with 
+<a href="https://en.wikipedia.org/wiki/Windows_Me">Windows Me</a> that we immediately switched to the glorious Windows XP that we all know, love and 
+dearly miss. As it turns out a few months later after my first use of the printer, my PS/2 connected mouse stopped working. I do not know if 
+the <a href="https://en.wikipedia.org/wiki/PS/2_port">PS/2 port</a> is broken or if my PS/2 mouse is broken. I did manage to find another PS/2 mouse but as it was water damaged from a basement 
+leak a few years ago, there was little chance it would work. Without a mouse made this task much harder, but I digress.</p>
+
+<div class="dual-image-container">
+<img style="width: 300px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Mini-Centronics_36_pin_with_Micro-Centronics_36_pin.jpg/1920px-Mini-Centronics_36_pin_with_Micro-Centronics_36_pin.jpg" alt="Parallel Port and connector" />
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/PS2_keyboard_and_mouse_jacks.jpg/300px-PS2_keyboard_and_mouse_jacks.jpg" />
+<p class="caption">Parallel Port</p>
+<p class="caption">PS/2 Port typically found in desktops from the 90s</p>
+</div>
+
+<p>Placing aside the hardware struggles to operate such printer in 2024, the printer does not have duplex printing so I had run commands on my 
+pdfs on my Linux machine before transferring the files to my Windows XP machine (thankfully there are USB ports on this desktop that work 
+or else I would have to dust off my 3.5 inch floppy disks and CDs). To split pdfs into even and odd pages turns out to be a very simple 
+command:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">pdftk <span class="nv">A</span><span class="o">=</span><span class="s2">"</span><span class="k">${</span><span class="nv">file</span><span class="k">}</span><span class="s2">"</span> <span class="nb">cat </span>Aodd output <span class="s2">"</span><span class="k">${</span><span class="nv">file</span><span class="k">}</span><span class="s2">-odd.pdf"</span>
+pdftk <span class="nv">A</span><span class="o">=</span><span class="s2">"</span><span class="k">${</span><span class="nv">file</span><span class="k">}</span><span class="s2">"</span> <span class="nb">cat </span>Aeven output <span class="s2">"</span><span class="k">${</span><span class="nv">file</span><span class="k">}</span><span class="s2">-even.pdf"</span></code></pre></figure>
+
+<p>As I am printing a bunch of papers on <a href="https://en.wikipedia.org/wiki/Trusted_Computing">Trusted Computing</a>, I needed to split a lot of PDFs 
+so this task can get quite tedious so I wrote a simple shell script:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="k">for </span>file <span class="k">in</span> <span class="k">*</span>pdf<span class="p">;</span> <span class="k">do
+  </span>pdftk <span class="nv">A</span><span class="o">=</span><span class="s2">"</span><span class="k">${</span><span class="nv">file</span><span class="k">}</span><span class="s2">"</span> <span class="nb">cat </span>Aodd output <span class="s2">"</span><span class="k">${</span><span class="nv">file</span><span class="k">}</span><span class="s2">-odd.pdf"</span>
+  pdftk <span class="nv">A</span><span class="o">=</span><span class="s2">"</span><span class="k">${</span><span class="nv">file</span><span class="k">}</span><span class="s2">"</span> <span class="nb">cat </span>Aeven output <span class="s2">"</span><span class="k">${</span><span class="nv">file</span><span class="k">}</span><span class="s2">-even.pdf"</span>
+<span class="k">done</span></code></pre></figure>
+
+
+</div>
+</div>
+
+    </div>
+
+  <footer>
+  <marquee id = "buttons">
+    <a href = "index.html"><img src = "/assets/buttons/button.png"></a>
+    <a href = "index.html"><img src = "/assets/buttons/button2.png"></a>
+    <a href = 'https://neocities.org/'><img src = "/assets/buttons/neocitiesorg.gif"></a>
+    <a href = 'https://www.vim.org/'><img src = "/assets/buttons/vim.gif"></a>
+    <a href = 'https://fedoraproject.org/'><img src = "/assets/buttons/gnu-linux.gif"></a>
+    <a href = "https://fedoraproject.org/"><img src = "/assets/buttons/powered_by_fedora_alt.png"></a>
+  </marquee>
+  <small><a href = "/credits" class = "credits">Credits</a></small>
+</footer>
+
+
+  </body>
+</html>

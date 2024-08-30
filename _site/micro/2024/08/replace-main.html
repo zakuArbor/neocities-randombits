@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>Replacing main() - RANDOM BITS</title>
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.cdnfonts.com/css/common-pixel" rel="stylesheet">
+    <link href="/assets/css/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/assets/css/syntax_monokai.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="icon" type="image/png" href="/assets/site/random-bits-favicon.png">
+    <meta name="og:title" content="Random Bits">
+    <meta name="og:image" content="">
+    <meta name="og:description"
+        content="Random bits of programming, math, and personal thoughts">
+    <meta name="keywords" content="zakuarbor, programming, math, random bits, pikachu">
+    <meta name="description" content="Random bits of programming, math, and personal thoughts">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script charset="utf-8" src="/assets/js/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+  </script>
+  <header>
+    <center>
+      <h1 id = "title"><a href = "index.html">RANDOM BITS</a><img id = "pikachu-header" src = "/assets/site/flying-pikachu.png"/></h1>
+    A random site by a random clueless human
+    </center>
+    <marquee scrollamount="4">
+      Random bits of programming, math, and thoughts
+      By a clueless human
+      &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+      Random bits of programming, math, and thoughts
+      By a clueless human
+    </marquee>
+
+    <a href="javascript:void(0);" class="hamburger-nav" onclick="toggleMenu()"><i class="fa fa-bars"></i></a>
+    <nav id="header-nav">
+    <center>
+      <a href="/index.html">Home</a>
+      <a href="/micro.html"><span style = "letter-spacing: 1px;">µ</span>Blog</a>
+      <a href="/math.html">Math</a>
+      <a href="/about.html">About</a>
+    </center>
+    </nav>
+    </header>
+
+
+  </head>
+  <body>
+
+    <div id = "wrapper">
+    <div id = "content">
+<div class = "bits">
+  <h1 class = "title">Replacing main()</h1>
+
+  <div>
+    <p class = "date">August 24, 2024</p>
+    
+    <div class="tags">
+      
+      
+        <a href="/categories/#micro">micro</a>
+        &nbsp;
+      
+        <a href="/categories/#gcc">gcc</a>
+        &nbsp;
+      
+        <a href="/categories/#c">c</a>
+        
+      
+    </div>
+  </div>
+  <p>Any beginner C programmer will know that the first function executed in any program is the <code class="language-plaintext highlighter-rouge">main()</code> function. However, that is not the entire 
+truth. Just like how we have learned the Bohr and Lewis diagrams in Chemistry in Highschool, this is an oversimplification.  From my knowledge, 
+the first function executed once the loader runs in a binary is <code class="language-plaintext highlighter-rouge">_start()</code>.</p>
+
+<p>Without going into any details, we can replace <code class="language-plaintext highlighter-rouge">main()</code> with another function such as <code class="language-plaintext highlighter-rouge">foo()</code> (sorry for the lack of creativity).</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp">
+</span>
+<span class="kt">int</span> <span class="nf">foo</span><span class="p">()</span> <span class="p">{</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">"Called foo</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+  <span class="n">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">"Called main</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>If we compile with <code class="language-plaintext highlighter-rouge">-e &lt;entry&gt;</code> where <code class="language-plaintext highlighter-rouge">&lt;entry&gt;</code> is the name of the function replacing <code class="language-plaintext highlighter-rouge">main()</code>, we can see the following results:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ gcc foo.c -e foo
+$ ./a.out 
+Called foo
+</code></pre></div></div>
+
+<p>We can also observe from <code class="language-plaintext highlighter-rouge">objdump</code> and <code class="language-plaintext highlighter-rouge">nm</code> to see where the <code class="language-plaintext highlighter-rouge">start_address</code> of the C code is (here I am making a distinction between the 
+first entry point of the C code and the binary).</p>
+
+<pre class="highlight"><code><font color="#D0CFCC"><b>$ </b></font> objdump -f ./a.out | grep start
+start address <font color="#C01C28"><b>0x0000000000401136</b></font>
+<font color="#D0CFCC"><b>$ </b></font>nm ./a.out | grep foo
+<b><font color="#C01C28">0000000000401136 T</font></b> foo</code></pre>
+
+<h3 id="few-notes">Few Notes</h3>
+<ol>
+  <li>You must define <code class="language-plaintext highlighter-rouge">main()</code> even if it’s not going to be used. <a href="https://en.cppreference.com/w/c/language/main_function">CPP Reference</a> states 
+this explicitly:
+    <blockquote>
+      <p>Every C program coded to run in a hosted execution environment contains the definition (not the prototype) of a function named main, which is the designated start of the program.</p>
+    </blockquote>
+
+    <p>Neglecting to define <code class="language-plaintext highlighter-rouge">main</code> results in an error like the following:</p>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ gcc foo.c
+/usr/bin/ld: /usr/lib/gcc/x86_64-redhat-linux/14/../../../../lib64/crt1.o: in function `_start':
+(.text+0x1b): undefined reference to `main'
+collect2: error: ld returned 1 exit status
+</code></pre></div>    </div>
+  </li>
+  <li>The C program entry must call <code class="language-plaintext highlighter-rouge">exit()</code> to terminate if it is not <code class="language-plaintext highlighter-rouge">main()</code> or else a segfault will occur
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./a.out 
+Called foo
+Segmentation fault (core dumped)
+</code></pre></div>    </div>
+
+    <p>a backtrace via gdb won’t give much information as to why. Probably best to consult with glibc. Essentially it is likely due to the fact 
+that <code class="language-plaintext highlighter-rouge">_start</code> is not a function that returns in the stack. It calls <code class="language-plaintext highlighter-rouge">exit</code> to terminate the program which probably does some cleaning via <code class="language-plaintext highlighter-rouge">atexit</code> 
+and set the exit status <code class="language-plaintext highlighter-rouge">$?</code> to some value.</p>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(gdb) bt 
+#0  0x0000000000000001 in ?? ()
+#1  0x00007fffffffdd46 in ?? ()
+#2  0x0000000000000000 in ?? ()
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<h3 id="random-links-for-later-research">Random Links for later Research</h3>
+<ul>
+  <li>https://vishalchovatiya.com/posts/crt-run-time-before-starting-main/</li>
+  <li>https://www.gnu.org/software/hurd/glibc/startup.html</li>
+  <li>https://stackoverflow.com/questions/63543127/return-values-in-main-vs-start</li>
+</ul>
+
+</div>
+</div>
+
+    </div>
+
+  <footer>
+  <marquee id = "buttons">
+    <a href = "index.html"><img src = "/assets/buttons/button.png"></a>
+    <a href = "index.html"><img src = "/assets/buttons/button2.png"></a>
+    <a href = 'https://neocities.org/'><img src = "/assets/buttons/neocitiesorg.gif"></a>
+    <a href = 'https://www.vim.org/'><img src = "/assets/buttons/vim.gif"></a>
+    <a href = 'https://fedoraproject.org/'><img src = "/assets/buttons/gnu-linux.gif"></a>
+    <a href = "https://fedoraproject.org/"><img src = "/assets/buttons/powered_by_fedora_alt.png"></a>
+  </marquee>
+  <small><a href = "/credits" class = "credits">Credits</a></small>
+</footer>
+
+
+  </body>
+</html>
