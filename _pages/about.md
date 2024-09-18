@@ -27,6 +27,7 @@ I maintain a blog focusing on programming and hopefully math at <a href = "https
 * Perl > Python for text manipulation (stop this madness using Python for text analysis aside from machine learning)
 * Vim is a great text editor
 * I study Math and yes I unfortunately learned too late that studying Math is not a pleasant way to kill time
+* [My Books]({{ site.baseurl }}/assets/personal/bookshelf.png)
 
 <hr/>
 
