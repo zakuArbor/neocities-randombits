@@ -3,7 +3,7 @@ layout: micro
 title:  "[Preview] Half-Width and Full-Width Characters"
 date: 2024-10-06
 categories: [micro, encoding]
-permalink: micro/2024/09/:title
+permalink: micro/2024/10/:title
 ---
 
 Those of us who live and speak English will probably never think about how characters are encoded which is how characters such as the 

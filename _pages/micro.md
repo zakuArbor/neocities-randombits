@@ -7,7 +7,7 @@ permalink: micro
 <h1>August Edition</h1>
 
 <ul>
-{% assign currentMonth = site.time | date: '%Y %b' %}
+{% assign currentMonth = "2024 Aug" | date: '%Y %b' %}
 {% for post in site.posts %}
     {% if post.categories contains 'micro'%}
         {% assign postMonth = post.date | date: '%Y %b' %}

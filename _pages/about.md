@@ -50,6 +50,10 @@ I maintain a blog focusing on programming and hopefully math at <a href = "https
 
 </div>
 
+<hr/>
+
+<h2><a href = "faq">Click to FAQ</a></h2>
+
 <b class = "ul-p">Notes:</b> 
 <ul class>
 <li>¹Wired or digital world, whatever you prefer</li>
