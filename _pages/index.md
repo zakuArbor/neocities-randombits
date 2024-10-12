@@ -25,8 +25,9 @@ Random bits is a personal outlet to talk about random bits of things that is goi
 </ul>
 
 ### Latest Blog 
+* [[Oct 12] Verifying Email Signature Manually](https://zakuarbor.github.io/blog/signature-verification/)
+* [[Oct 07] A Quick Look Into Half-Width and Full-Width Characters](https://zakuarbor.github.io/blog/halfwidth-fullwidth-encoding/)
 * [[June 22] Polluting the Web With a Useless 5 argument main function](https://zakuarbor.github.io/blog/useless-main/)
-* [[May 27] A Quick and Flawed Look Into Spatial Locality and TLB](https://zakuarbor.github.io/blog/regret-tlb-cacheline/)
 * [[May 08] Splitting Files On Linux](https://zakuarbor.github.io/blog/split-files/)
 * [[Jan 14] Real Analysis 1](https://zakuarbor.github.io/blog/math3001/)
 
