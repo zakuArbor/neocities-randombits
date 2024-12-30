@@ -15,7 +15,7 @@ Random bits is a personal outlet to talk about random bits of things that is goi
 {% for post in site.posts %}
     {% if post.categories contains 'micro'%}
         {% assign i = i | plus: 1 %}
-        {% if i == 5 %}
+        {% if i == 6 %}
             {% break %}
         {% endif %}
         {% assign shorturl = post.id | split: "/" | last %}

@@ -6,7 +6,7 @@ categories: [micro, linux]
 permalink: micro/2024/12/:title
 ---
 
-I previously mentioned that [I lost my file](../jekyll-cache) by accidentally overwritting my file using the `cp` command. This got me thinking as to why this would be impossible on 
+I previously mentioned that [I lost my file](./jekyll-cache) by accidentally overwriting my file using the `cp` command. This got me thinking as to why this would be impossible on 
 my work laptop since I would be constantly bombarded with a prompt to confirm my intention to overwrite the file. 
 
 ```
@@ -14,7 +14,7 @@ $ cp 2024-12-01-template.md 2024-12-30-alias-interactive.md
 cp: overwrite '2024-12-30-alias-interactive.md'?
 ```
 
-Commands like `mv` and `cp` have an **interactive** flag `-i` to prompt before overwritting the file. As seen in `man 1 cp`
+Commands like `mv` and `cp` have an **interactive** flag `-i` to prompt before overwriting the file. As seen in `man 1 cp`
 
 ```
 -i, --interactive

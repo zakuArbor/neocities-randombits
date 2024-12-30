@@ -3,7 +3,7 @@ layout: micro
 title:  "QNX is 'Free' to Use"
 date: 2024-11-09
 categories: [micro, qnx]
-permalink: micro/2024/10/:title
+permalink: micro/2024/11/:title
 ---
 
 <p>Recently on Hackernews, a relations developer from QNX announced that <a href="https://news.ycombinator.com/item?id=42079460">QNX is now free for anything non-commercial</a>. QNX also made an annoncement
@@ -37,10 +37,10 @@ are either more open or easier to obtain (such as through Raspberry Pi Foundatio
 <p>While I have not done any sentimental analysis of this announcement, I think overall this move is a good first step to develop an ecosystem of developers who appreciate and understand the QNX architecture but is also
 met with sketpicism. For reference, QNX has messed with the community twice before which explains the big mistrust from experienced developers. The top comment on <a href="https://news.ycombinator.com/item?id=42079460">Hackernews</a>
 does a great job summarizing the sketpicism. QNX used to have a bigger hobbyist community in the past where open source projects such as Firefox would have a build for QNX, but that all died when QNX closed their doors
-to the community. Years later, QNX source code was available for the public to read (though probably with restrictions) but later shut the source code availability after being acquired bhy Blackberry who does not have the
+to the community. Years later, QNX source code was available for the public to read (though probably with restrictions) but later shut the source code availability after being acquired by Blackberry who does not have the
 best reputation to the developer community (hence why Blackberry Phones failed to capture the market from my understanding despite once being a market leader).</p>
 
-<p>Regardless, I have plans to create a few materials on QNX in the coming months and perhaps create a follow up to <a href="https://zakuarbor.github.io/blog/qnx-aps/">QNX Adapative Partitioning System</a> as it seemed to have gained enou
+<p>Regardless, I have plans to create a few materials on QNX in the coming months and perhaps create a follow up to <a href="https://zakuarbor.github.io/blog/qnx-aps/">QNX Adapative Partitioning System</a> as it seemed to have gained enough
 has been ranked top 5 on Google search results (though I doubt it had many readers due to the population of QNX developers):</p>
 
 <p><img src="/assets/products/qnx/aps-search-results.png" alt="Google Search Result Ranking for my QNX APS webpage" /></p>

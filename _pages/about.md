@@ -3,7 +3,7 @@ layout: page
 title: "About"
 permalink: /about.html
 ---
-# About
+<h2 id = "page-title"><img id = "pikachu-title" width="120px" src = "{{site.baseurl}}/assets/site/pikachu-pencil-color-filter.jpg">About</h2>
 
 <p>
   Welcome to yet another random webpage in the cyberspace¹ written by a random human on planet Earth. Random bits is a personal outlet 

@@ -1,23 +1,23 @@
----
-layout: page
-title: µBlog
-permalink: micro
----
-
-<h1>Complete List</h1>
+<h1>August Edition</h1>
 
 <ul>
+{% assign currentMonth = "2024 Aug" | date: '%Y %b' %}
 {% for post in site.posts %}
     {% if post.categories contains 'micro'%}
+        {% assign postMonth = post.date | date: '%Y %b' %}
+        {% if postMonth == currentMonth %}
         {% assign shorturl = post.id | split: "/" | last %}
-        <li><a href = '..{{ post.url }}'>[{{ post.date | date: "%Y-%m-%d" }}] {{ post.title }}</a></li>
+        <li><a href = '..{{ post.url }}'>{{ post.title }}</a></li>
+        {% endif %}
     {% endif %}
 {% endfor %}
 </ul>
 
-
 {% for post in site.posts %}
     {% if post.categories contains 'micro'%}
+        {% assign postMonth = post.date | date: '%Y %b' %}
+        {% if postMonth == currentMonth %}
+        {% assign shorturl = post.id | split: "/" | last %}
 <hr class = "bits-hr">
 <div class = "bits">
 <h1 class = "title">{{ post.title }}</h1>
@@ -32,5 +32,6 @@ permalink: micro
 </div>
 {{ post.content }}
 </div>
+        {% endif %}
     {% endif %}
 {% endfor %}
