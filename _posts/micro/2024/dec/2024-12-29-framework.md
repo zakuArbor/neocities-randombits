@@ -3,7 +3,7 @@ layout: micro
 title:  "New Laptop: Framework 16"
 date: 2024-12-29
 categories: [micro]
-published: false
+published: true
 permalink: micro/2024/10/:title
 ---
 
