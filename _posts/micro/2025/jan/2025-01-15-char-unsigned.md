@@ -39,7 +39,7 @@ their `char` will lie outside of 0 to 127.
 I heard rumours that Apple may treat the signedness of `char` as `signed` instead but I unfortunately do not have access to an Apple ARM development machine to 
 verify this myself.
 
-Maybe I'll examine this more in my [blog](https://https://zakuarbor.github.io/blog/) by examining what is going on under the hood and compare this with amd64 and 
+Maybe I'll examine this more in my [blog](https://zakuarbor.github.io/blog/sign-of-char/) by examining what is going on under the hood and compare this with amd64 and 
 whether or not QNX makes this change as well.
 
 **Note:** I purposely omitted how signed bit works and the 2's complement
