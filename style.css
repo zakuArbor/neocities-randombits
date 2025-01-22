@@ -29,6 +29,10 @@ img {
   max-width: 100%;
 }
 
+.img-500 {
+  max-width: 500px; //for non-small screens
+}
+
 .last-edit {
 }
 
@@ -206,5 +210,9 @@ footer {
   #content {
     padding: .5em;
     border: 0px;
+  }
+
+  .img-500 {
+    max-width: 100%;
   }
 }

@@ -60,6 +60,10 @@ nav a:visited {
   text-align: center;
 }
 
+.img-500 {
+  max-width: 500px !important;
+}
+
 .last-edit {
 }
 
@@ -429,5 +433,9 @@ footer {
 
   header {
     padding: 2px;
+  }
+
+  .img-500 {
+    max-width: 100% !important;
   }
 }
