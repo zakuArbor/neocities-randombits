@@ -9,6 +9,18 @@ permalink: /
 A random website in cyberspace (or the wired) written by a random human on planet Earth. 
 Random bits is a personal outlet to talk about random bits of things that is going in my mind and life.
 
+---
+
+### Site Map
+
+<a href = "micro.html"><span style = "letter-spacing: 1px;">µ</span>Blog</a> - Not tiny but not large as my regular blog posts<br/>
+<a href = "link.html">LinkBlog</a> - Links to blogs or articles I found interesting<br/>
+<a href = "math.html">Math</a> - Math blogs ...<br/>
+<a href = "about.html">About</a> - For stalkers or bored humans
+
+---
+
+
 ### Latest µBlog / Dernier µBlog
 <ul>
 {% assign i = 0 %}
@@ -34,6 +46,15 @@ Random bits is a personal outlet to talk about random bits of things that is goi
 ### Change Log / Le Journal de Modification
 
 <div class = "update-chat">
+<div class = "msg">
+    <img class = "pfp" src = "{{ site.baseurl }}/assets/images/site/frigimon.png">
+    <div class = "text">
+        <div class = "date">2025-01-26</div>
+        <div class = "name">Bonhomme de Neige</div>
+        <div class = "body">Ajoutez une nouvelle page pour partager des liens intéressants</div>
+    </div>
+</div>
+
 <div class = "msg">
     <img class = "pfp" src = "{{ site.baseurl }}/assets/images/site/mushroom.png">
     <div class = "text">
