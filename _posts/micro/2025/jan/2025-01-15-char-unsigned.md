@@ -2,7 +2,7 @@
 layout: micro
 title:  "The Sign of Char in ARM"
 date: 2025-01-15
-categories: [micro, arm, C]
+categories: [micro, arm, C/C++]
 published: true
 permalink: micro/2025/01/:title
 ---

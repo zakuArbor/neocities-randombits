@@ -2,7 +2,7 @@
 layout: micro
 title:  "Stack Overflow: The Case of a Small Stack"
 date: 2024-12-20
-categories: [micro, stack, qnx, C]
+categories: [micro, stack, qnx, C/C++]
 permalink: micro/2024/12/:title
 ---
 

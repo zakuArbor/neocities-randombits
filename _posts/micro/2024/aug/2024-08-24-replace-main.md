@@ -2,7 +2,7 @@
 layout: micro
 title: Replacing main()
 date: 2024-08-24
-categories: [micro, gcc, c]
+categories: [micro, gcc, C/C++]
 permalink: micro/2024/08/:title
 ---
 

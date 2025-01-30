@@ -16,7 +16,8 @@ Random bits is a personal outlet to talk about random bits of things that is goi
 <a href = "micro.html"><span style = "letter-spacing: 1px;">µ</span>Blog</a> - Not tiny but not large as my regular blog posts<br/>
 <a href = "link.html">LinkBlog</a> - Links to blogs or articles I found interesting<br/>
 <a href = "math.html">Math</a> - Math blogs ...<br/>
-<a href = "about.html">About</a> - For stalkers or bored humans
+<a href = "about.html">About</a> - For stalkers or bored humans<br/>
+<a href = "categories">Categories</a> - A list of categories of my  µblog
 
 ---
 

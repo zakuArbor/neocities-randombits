@@ -11,6 +11,15 @@ I'll try to avoid having a large daunting list like my [former prof](https://www
 
 ---
 
+**[The invalid 68030 instruction that accidentally allowed the Mac Classic II to successfully boot up](https://www.downtowndougbrown.com/2025/01/the-invalid-68030-instruction-that-accidentally-allowed-the-mac-classic-ii-to-successfully-boot-up/)**
+
+An interesting read despite only understanding the gist of it. Essentially, the writer stumbled an issue that was displaying a Sad Mac with an indication that a 
+bus error has occurred when trying out a keystroke that I guess is supposed to invoke a debugger on an emulator running Macintosh Classic II. As the title suggested, 
+it's a dive into how he realized there was an invalid instruction in Motorola MC68030 CPU that allowed the Mac Classic II to boot up. A redditor commented [quipped 
+that this would be a clever DRM protection](https://www.reddit.com/r/programming/comments/1ibei57/comment/m9kkmkv/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button) 
+since it's an undocumented or invalid instruction that only allows the rom of the Classic II to only run on MC68030. This was an interesting theory/joke.
+
+
 **[The GPU, not the TPM, is the root of hardware DRM](https://mjg59.dreamwidth.org/70954.html)**
 
 I always thought one could capture whatever is displayed on the screen and if one couldn't, one could circumvent the protection via software including modification 

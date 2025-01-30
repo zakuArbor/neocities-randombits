@@ -1,7 +1,7 @@
 ---
 layout: micro
 title: "multiple definition of `variable` ... first defined here"
-categories: [micro,gcc,c]
+categories: [micro,gcc,C/C++]
 date: 2024-08-10
 shorturl: multiple-def
 permalink: micro/2024/08/multiple-def
