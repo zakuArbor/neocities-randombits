@@ -11,14 +11,25 @@ I'll try to avoid having a large daunting list like my [former prof](https://www
 
 ---
 
+**[C23: un memset_explicit() qui carbure](https://linuxfr.org/users/tarnyko/journaux/c23-un-memset_explicit-qui-carbure)**
+
+When working with senisitive information such as password, it is often good practice to zero out or fill the memory with garbage values when the informtion is 
+no longer needed. This helps prevent leaks of sensitive information. What is often the case, the variable holding the sensitive information is often not ever 
+reused again and therefore the compiler will often ignore this call to zero out the sensitive information. The article was an interesting read as I forgot about 
+the existence of optimization. The author provides a [multiplatform solution](https://github.com/Tarnyko/suave_code_samples/tree/master/C/C23/memset_explicit) to 
+this problem.
+
+---
+
 **[The invalid 68030 instruction that accidentally allowed the Mac Classic II to successfully boot up](https://www.downtowndougbrown.com/2025/01/the-invalid-68030-instruction-that-accidentally-allowed-the-mac-classic-ii-to-successfully-boot-up/)**
 
 An interesting read despite only understanding the gist of it. Essentially, the writer stumbled an issue that was displaying a Sad Mac with an indication that a 
 bus error has occurred when trying out a keystroke that I guess is supposed to invoke a debugger on an emulator running Macintosh Classic II. As the title suggested, 
-it's a dive into how he realized there was an invalid instruction in Motorola MC68030 CPU that allowed the Mac Classic II to boot up. A redditor commented [quipped 
+it's a dive into how he realized there was an invalid instruction in Motorola MC68030 CPU that allowed the Mac Classic II to boot up. A redditor [quipped 
 that this would be a clever DRM protection](https://www.reddit.com/r/programming/comments/1ibei57/comment/m9kkmkv/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button) 
 since it's an undocumented or invalid instruction that only allows the rom of the Classic II to only run on MC68030. This was an interesting theory/joke.
 
+---
 
 **[The GPU, not the TPM, is the root of hardware DRM](https://mjg59.dreamwidth.org/70954.html)**
 
