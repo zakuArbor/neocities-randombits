@@ -11,6 +11,13 @@ I'll try to avoid having a large daunting list like my [former prof](https://www
 
 ---
 
+**[La fin de Windows 10 : une opportunité pour Linux ?](https://linuxfr.org/users/usawa/journaux/la-fin-de-windows-10-une-opportunite-pour-linux)**
+
+There has been some optimistism of a great migration to Linux due to the approaching end of Windows 10 forcing millions of PCs without TPM to either be thrown out
+or be migrated to Linux (or BSD). This articles highlights the difficulty of this dream.
+
+---
+
 **[C23: un memset_explicit() qui carbure](https://linuxfr.org/users/tarnyko/journaux/c23-un-memset_explicit-qui-carbure)**
 
 When working with senisitive information such as password, it is often good practice to zero out or fill the memory with garbage values when the informtion is 
