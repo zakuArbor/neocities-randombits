@@ -4,9 +4,29 @@ title: Math
 permalink: /math
 ---
 
-## {{page.title}}
+<style>
 
-Random bits of Math, mainly from my [blog](https://zakuarbor.github.io/blog/)
+#pikachu-title {
+    top: -40px;
+}
+
+#title-content {
+    margin-bottom: 35px;
+}
+@media only screen and (max-width: 600px) {
+    #pikachu-title {
+        top: 0px;
+    }
+    #title-content {
+        margin-bottom: 0px;
+    }
+}
+</style>
+
+<h2 id = "page-title"><img id = "pikachu-title" src = "{{site.baseurl}}/assets/gifs/pikachu-snoozing.webp">{{page.title}}</h2>
+<p id = "title-content">Random bits of Math, mainly from my <a href = "https://zakuarbor.github.io/blog/">blog</a></p>
+
+---
 
 <ul>
 {% for post in site.posts %}

@@ -4,7 +4,7 @@ title: Random Links
 permalink: /link
 ---
 
-## {{page.title}}
+<h2 id = "page-title"><img id = "pikachu-title" src = "{{site.baseurl}}/assets/gifs/pikachu-hi.webp">{{page.title}}</h2>
 
 Random links that I found interesting. I'll try to limit my commentary to a few sentences and be more organized. 
 I'll try to avoid having a large daunting list like my [former prof](https://www.cs.toronto.edu/~arnold/)
