@@ -11,6 +11,17 @@ I'll try to avoid having a large daunting list like my [former prof](https://www
 
 ---
 
+**[bmpuzzle: Embed files within the padding of bitmap images](https://xiokka.neocities.org/projects/bmpuzzle/)**
+
+As title suggests, you can exploit padding that occurs for bmp images to embed files. Quite elegant and is much more discreet that concatenating a file 
+on an image or [Stegasploit](https://stegosploit.info/), a way to encode files into PNG and JPEG images by utilizing the nature of polyglot. The reason 
+why I like the suggested solution of embedding files onto the padding is that it's both simple and more discreet as it does not increase the size of the image 
+and does not require the need for a complex iterative encoder to encode the image. Though there are constraints to what files you can encode as you would require 
+a very tall image.
+ 
+
+---
+
 **[La fin de Windows 10 : une opportunité pour Linux ?](https://linuxfr.org/users/usawa/journaux/la-fin-de-windows-10-une-opportunite-pour-linux)**
 
 There has been some optimistism of a great migration to Linux due to the approaching end of Windows 10 forcing millions of PCs without TPM to either be thrown out
