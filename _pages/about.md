@@ -34,7 +34,6 @@ I maintain a blog focusing on programming and hopefully math at <a href = "https
 ## Short Bits
 
 <div class = "quick-badges">
-
 <div><img src = "pixel button for coffee" src = "{{ site.baseurl }}/assets/buttons/coffee-powered.gif"></div>
 <div><img src = "pixel button for chi cat cs major" src = "{{ site.baseurl }}/assets/buttons/cs-cat.gif"></div>
 <div><img src = "pixel button for confused cat in math" src = "{{ site.baseurl }}/assets/buttons/math-major.gif"></div>
@@ -47,7 +46,33 @@ I maintain a blog focusing on programming and hopefully math at <a href = "https
 <div><img src = "pixel button for Perl" src = "{{ site.baseurl }}/assets/buttons/perl.png"></div>
 <div><img src = "pixel button for Bash" src = "{{ site.baseurl }}/assets/buttons/bash.png"></div>
 <div><img src = "pixel button for LATEX" src = "{{ site.baseurl }}/assets/buttons/latex.png"></div>
+</div><br/>
+<center><b>ANIME:</b></center>
+<div class = "badges-120">
+<div><img src = "digimon adventures 01" src = "{{ site.baseurl }}/assets/buttons/anime-manga-ln/digimon.png"></div>
+<div><img src = "Tsubasa Chronicles" src = "{{ site.baseurl }}/assets/buttons/anime-manga-ln/tsubasa-chronicles.png"></div>
+<div><img src = "Clannad" src = "{{ site.baseurl }}/assets/buttons/anime-manga-ln/clannad.png"></div>
+<div><img src = "Lycoris Recoil" src = "{{ site.baseurl }}/assets/buttons/anime-manga-ln/lycoris.png"></div>
+<div><img src = "Gundam" src = "{{ site.baseurl }}/assets/buttons/anime-manga-ln/gundam.png"></div>
+<div><img src = "Inyuasha" src = "{{ site.baseurl }}/assets/buttons/anime-manga-ln/inyuasha.png"></div>
 
+</div>
+
+<center><b>MANGA:</b></center>
+<div class = "badges-120">
+<div><img src = "cross-game" src = "{{ site.baseurl }}/assets/buttons/anime-manga-ln/cross-game.png"></div>
+<div><img src = "hidamari sketch" src = "{{ site.baseurl }}/assets/buttons/anime-manga-ln/hidamari-sketch.png"></div>
+<div><img src = "Twin Spica" src = "{{ site.baseurl }}/assets/buttons/anime-manga-ln/twin-spica.png"></div>
+</div>
+
+<center><b>LIGHT NOVELS:</b></center>
+<div class = "badges-120">
+<div><img src = "legend of the galactic heroes" src = "{{ site.baseurl }}/assets/buttons/anime-manga-ln/lotgh.png"></div>
+<div><img src = "Monogatari" src = "{{ site.baseurl }}/assets/buttons/anime-manga-ln/monogatari.png"></div>
+<div><img src = "5cm per second" src = "{{ site.baseurl }}/assets/buttons/anime-manga-ln/5cms.png"></div>
+<div><img src = "Vivy" src = "{{ site.baseurl }}/assets/buttons/anime-manga-ln/vivy.png"></div>
+<div><img src = "Banner of the Stars" src = "{{ site.baseurl }}/assets/buttons/anime-manga-ln/banner-stars.png"></div>
+<div><img src = "Full Metal Panic" src = "{{ site.baseurl }}/assets/buttons/anime-manga-ln/full-metal-panic.png"></div>
 </div>
 
 <hr/>
@@ -62,3 +87,7 @@ I maintain a blog focusing on programming and hopefully math at <a href = "https
 </ul>
 
 <p class = "last-edit"><b>Last Major Edit:</b> 2024-08-18</p> 
+
+---
+
+* manga: cross-game, pokemon adventures, tsubasa chronicles
