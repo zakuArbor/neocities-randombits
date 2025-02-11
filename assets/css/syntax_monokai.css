@@ -155,7 +155,7 @@
 }
 .highlight .nl {
   color: #ffffff;
-  background-color: #272822;
+  background-color: #1b1b1b;
 }
 .highlight .ni {
   color: #ffffff;
@@ -175,7 +175,7 @@
 }
 .highlight .nv, .highlight .vm {
   color: #ffffff;
-  background-color: #272822;
+  background-color: #1b1b1b;
 }
 .highlight .w {
   color: #ffffff;
@@ -187,7 +187,7 @@
 }
 .highlight .n, .highlight .py, .highlight .nx {
   color: #ffffff;
-  background-color: #272822;
+  background-color: #1b1b1b;
 }
 .highlight .ow {
   color: #f92672;
