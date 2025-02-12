@@ -77,4 +77,4 @@ $ cat halfwidth-utf16.txt; echo ; xxd halfwidth-utf16.txt; cat fullwidth-utf16.t
 As expected, UTF-16 represents code points in the upper range very well where we now see `１` (full-width 1) being represented with only 2 bytes unlike the 3 that was required in UTF-8. 
 Though the same cannot be said for code points in the lower range such as our half-width digit 	`1` which now takes 2 bytes by appending `0x00` to its hex representation.
 
-I will be writing a more detailed look into encoding at my [blog](https://zakuarbor.github.io/blog/) in the coming days. This is just a quick preview.
+I will be writing a more detailed look into encoding at my [blog](https://zakuarbor.github.io/blog/halfwidth-fullwidth-encoding/) in the coming days. This is just a quick preview.

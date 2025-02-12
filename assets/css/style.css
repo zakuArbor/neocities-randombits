@@ -105,6 +105,16 @@ a:hover{
   font-size: 55px;
 }
 
+.badges-120 {
+  display: grid;
+  grid-template-columns: 120px 120px 120px;
+  grid-gap: 5px;
+  margin: auto;
+  text-align: center;
+  justify-content: center;
+}
+
+
 .quick-badges {
   display: grid;
   grid-template-columns: 88px 88px 88px 88px;
