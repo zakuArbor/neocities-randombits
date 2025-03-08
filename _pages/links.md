@@ -11,6 +11,17 @@ I'll try to avoid having a large daunting list like my [former prof](https://www
 
 ---
 
+**[Tracking You from a Thousand Miles Away! Turning a Bluetooth Device into an Apple AirTag Without Root Privileges](https://nroottag.github.io/)**
+
+This is a paper that demonstrates a way to track the location of a bluetooth device such as your Linux machine utilizing Apple's AirTag network. The irony is 
+that iPhones can be utilized to track and stalk Android devices. What makes this paper interesting is its effectiveness and how wide spread 
+its targets are as it can target Linux, Windows, and Android. 
+The paper does suggest this attack would work for Apple devices as well by exploiting known vulnerabilities. The paper's threat model assumes the device has been 
+infected via various methods such as extending an App's functionality to be malicious which could be utilized by advertisers, social media companies and music apps 
+to track their user's locations.
+
+---
+
 **[bmpuzzle: Embed files within the padding of bitmap images](https://xiokka.neocities.org/projects/bmpuzzle/)**
 
 As the title suggests, you can exploit padding that occurs for bmp images to embed files. Quite elegant and is much more discreet that concatenating a file 
