@@ -7,13 +7,16 @@ published: true
 permalink: micro/2025/04/:title
 ---
 
+**Note:** After publishing the post, turns out $\epsilon < 0$ could be correct, but $\epsilon$ should have been -4 instead.
+
 A friend shared with me the recent and infamous Math equation that has trade and economic experts scratching their head:
 
 $$
-\Delta \tau_i = \frac{x_i - m_i}{\epsilon \cdot \varphi \cdot m_i}
+\Delta \tau_i = \frac{x_i - m_i}{\epsilon \varphi m_i}
 $$
 
-I am not going to discuss about poltics nor my opinions about the use of this equation. But rather talk about 
+I am not going to discuss about poltics nor my opinions about the use of this equation. Nor will I discuss about the equation 
+itslef, there's plenty of journalists, economists, and mathematicians who could comment more on this. I will instead be talking about 
 a contradiction that appears in their [website](https://ustr.gov/issue-areas/reciprocal-tariff-calculations) taken on April 7 2025:
 
 ![image showing epsilon < 0]({{site.baseurl}}/assets/micro/math/epsilon<0.png)
