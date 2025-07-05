@@ -11,6 +11,7 @@ Reading the coding standards at a company I recently joined revealed to me the i
 used to enumerate through an `enum`. `default` label is convenient to handle any edge cases and it's often used to handle errors. However, when working with enums, it is often 
 the case that the prpogrammer intends to handle all possible values in the enum and would turn on `-Wswitch` or `-Werror=switch`.
 
+Let's suppose I have an enum to represent the different suite in a deck of cards:
 ```c
 #include <stdio.h>
 
@@ -20,9 +21,10 @@ enum Suit {
   Clubs,
   Spades
 };
+```
 
-int main(int argc, char **argv) {
-  enum Suit suit = argc; 
+and my break statement looks like the following:
+```c
   switch(suit) {
     case Diamonds:
       printf("Diamonds\n");
