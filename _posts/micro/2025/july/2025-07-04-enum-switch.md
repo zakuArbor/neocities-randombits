@@ -13,8 +13,6 @@ the case that the prpogrammer intends to handle all possible values in the enum 
 
 Let's suppose I have an enum to represent the different suite in a deck of cards:
 ```c
-#include <stdio.h>
-
 enum Suit {
   Diamonds,
   Hearts,
