@@ -1,10 +1,10 @@
 ---
 layout: micro
 title:  "The Issue With Default in Switch Statements with Enums"
-date: 2025-06-04
-categories: [micro] 
+date: 2025-07-04
+categories: [micro, c/c++] 
 published: true
-permalink: micro/2025/06/:title
+permalink: micro/2025/07/:title
 ---
 
 Reading the coding standards at a company I recently joined revealed to me the issue with default label within the switch statement and why it's prohibitted when its being 
