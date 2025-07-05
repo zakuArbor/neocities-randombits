@@ -11,6 +11,16 @@ I'll try to avoid having a large daunting list like my [former prof](https://www
 
 ---
 
+[CentOS Stream 10 Requiring AVX and AVX2 Support](https://lwn.net/Articles/986792/)
+
+Prior to this article, I was not explicitly aware that there were x86-64 extensions of which could cause other x86-64 software unable to run on older x86-64 chips despite being 
+of the same AMD64 architecture. This has unintended consequences such as [CERN](https://lists.centos.org/hyperkitty/list/devel@lists.centos.org/message/AKGZLFOZV5IDESSBJLQ3RL5JBZK2K74N/) 
+unable to continue its use of RHEL for industrial-control systems. For context, Stream 10 now requires AVX and AVX2 support (advanced vector extensions) which isn't supported on older 
+chips. It is prohibitally expensive for organizations to replace thousands of chips before their expected retirements/lifespan/replacement. In hindsight, I should have known since 
+POWER and ARM continually introduce new instructions. I have no clue why this never clicked in my head.
+
+---
+
 [Lessons from open source in the Mexican government](https://lwn.net/Articles/1013776/)
 
 The article is interesting as it highlights the difficulty of introducing open-source to governments who are not known to be the most tech-savvy nor have the 
